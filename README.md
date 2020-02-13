@@ -75,9 +75,8 @@ Dog profile {
 Match model
 
 ```
-TBD.
-
-See if the dog1 and the dog2 matches, then create a new chat for them.
+Request if the dog1 ID and the dog2 ID likes eachother and if it does, let them start a new chat.
+tbd
 ``` 
 
 ## Links
