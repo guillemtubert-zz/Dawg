@@ -69,7 +69,7 @@ Doggy model
   dogName: String,
   breed: String,
   age: Number,
-  Activity: String, enum: ["Shy","Friendly","Very Sociable"],
+  activity: String, enum: ["Shy","Friendly","Very Sociable"],
   favoriteDogs: [FavoriteDogIds],
 }
 
