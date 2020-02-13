@@ -1,18 +1,48 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const mongoose = require('mongoose');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
-var router = require('./routes/index');
+const router = require('./routes/index');
 
-var app = express();
+const dbName = "Dog-Network";
+const PORT = 3000;
+
+const app = express();
+
+mongoose.connect(`mongodb://localhost:${PORT}/${dbName}`, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+// SESSION MIDDLEWARE
+app.use(
+  session({
+    secret: "basic-auth-secret",
+    // cookie: { maxAge: 3600000 * 1 },	// 1 hour
+    resave: true,
+    saveUninitialized: false,
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 60 * 60 * 24 * 7 // Time to live - 7 days (14 days - Default)
+    })
+  })
+);
 
 app.use('/', router);
 
