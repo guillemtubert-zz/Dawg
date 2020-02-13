@@ -64,8 +64,7 @@ Doggy model
   age: { type: Number, required: true }
   image: { type: String, default: "./img/default.jpg" }
   activity: { type: String, enum: ["Shy","Friendly","Very Sociable"], required: true},
-  potentialMatches: [matchId],
-  successfulMatches: [matchId]
+  interactions: [matchId],
 }
 
 ```
