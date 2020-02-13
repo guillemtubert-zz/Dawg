@@ -1,0 +1,35 @@
+<form action="/signup" method="post">
+
+  <label for="">E-mail</label>
+  <input type="email" name="email">
+
+  <label for="">Password</label>
+  <input type="password" name="password">
+
+  <label for="">Dog name</label>
+  <input type="text" name="username">
+
+  <label for="">Age</label>
+  <input type="number" name="age">
+
+  <label for="">Breed</label>
+  <input type="text" name="breed">
+
+  <label for="">Activity</label>
+  <input type="text" name="activity">
+
+  <label for="">Phone number</label>
+  <input type="number" name="phone">
+
+  <label for="">Profile picture</label>
+  <input type="image" name="profile-picture">
+   
+  
+
+  <button>Next</button>
+
+</form>
+
+{{#if errorMessage}}
+<p>{{errorMessage}}</p>
+{{/if}}
