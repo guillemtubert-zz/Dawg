@@ -3,14 +3,15 @@
 ## Description
 
 Doggy is an app to meet new dogs arround you. You can create a profile, search for new dog friends and chat with them!
- 
+
 ## User Stories
 
 - **homepage** - As a user I want to be able to access the homepage so that I see what the app is about and login and signup
 - **sign up** - As a user I want to sign up on the webpage so that I can see all the events that I could attend
 - **login** - As a user I want to be able to log in on the webpage so that I can get back to my account
 - **logout** - As a user I want to be able to log out from the webpage so that I can make sure no one will access my account
-- **match** - see new dogs.
+- **Delete match**  - As a user I want to be able to delete a match that I don't want anymore
+- **match** - As a user I want to be able to see the dogs arround me, like them or reject them.
 - **Direct Messages** - Chat with the dogs you've matched!
 - **Profile** - See your profile. Edit it and change the search settings
 
@@ -36,22 +37,18 @@ Homepage
 
 
 
-| **Method** | **Route**                          | **Description**                                              | Request  - Body                                          |
-| ---------- | ---------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------- |
-| `GET`      | `/`                                | Main page route.  Renders home `index` view.                 |                                                          |
-| `GET`      | `/login`                           | Renders `login` form view.                                   |                                                          |
-| `POST`     | `/login`                           | Sends Login form data to the server.                         | { email, password }                                      |
-| `GET`      | `/signup`                          | Renders `signup` form view.                                  |                                                          |
-| `POST`     | `/signup`                          | Sends Sign Up info to the server and creates user in the DB. | {  email, password  }                                    |
-| `GET`      | `/private/edit-profile`            | Private route. Renders `edit-profile` form view.             |                                                          |
-| `PUT`      | `/private/edit-profile`            | Private route. Sends edit-profile info to server and updates user in DB. | { email, password, [firstName], [lastName], [imageUrl] } |
-| `GET`      | `/private/favorites`               | Private route. Render the `favorites` view.                  |                                                          |
-| `POST`     | `/private/favorites/`              | Private route. Adds a new favorite for the current user.     | { name, cuisine, city, }                                 |
-| `DELETE`   | `/private/favorites/:restaurantId` | Private route. Deletes the existing favorite from the current user. |                                                          |
-                                  
-
-
-
+| **Method** | **Route**                           | **Description**                                              | Request  - Body                                              |
+| ---------- | ----------------------------------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
+| `GET`      | `/`                                 | Main page route.  Renders home `index` view.                 |                                                              |
+| `GET`      | `/login`                            | Renders `login` form view.                                   |                                                              |
+| `POST`     | `/login`                            | Sends Login form data to the server.                         | { email, password }                                          |
+| `GET`      | `/signup`                           | Renders `signup` form view.                                  |                                                              |
+| `POST`     | `/signup`                           | Sends Sign Up info to the server and creates user in the DB. | { email, password, [dogName], [phoneNumber], [breed], [age], [imageUrl], [activity] } |
+| `GET`      | `/private/edit-profile`             | Private route. Renders `edit-profile` form view.             |                                                              |
+| `PUT`      | `/private/edit-profile`             | Private route. Sends edit-profile info to server and updates user in DB. | { email, password, [dogName], [phoneNumber], [breed], [age], [imageUrl], [activity] } |
+| `POST`     | /private/search-preferences         | Private route. Add the preferences you would like to search with. | {[breed], [age]}                                             |
+| `POST`     | `/private/favorites/`               | Private route. Adds a new favorite for the current user.     | { [dogName], [image], [phoneNumber] }                        |
+| `DELETE`   | `/private/match/:successfulMatchId` | Private route. Deletes the existing favorite from the current user. |                                                              |
 
 ## Models
 
@@ -59,13 +56,16 @@ Doggy model
 
 ```javascript
 {
-  email: String,
-  password: String,
-  dogName: String,
-  breed: String,
-  age: Number,
-  activity: String, enum: ["Shy","Friendly","Very Sociable"],
-  favoriteDogs: [FavoriteDogIds],
+  email: { type: String, required: true }
+  password: { type: String, required: true }
+  dogName: { type: String, required: true }
+  phoneNumber: { type: Number, required: true }
+  breed: { type: String, enum: ['bulldog', 'shi tzu', (...)], required: true},
+  age: { type: Number, required: true }
+  image: { type: String, default: "./img/default.jpg" }
+  activity: { type: String, enum: ["Shy","Friendly","Very Sociable"], required: true},
+  potentialMatches: [matchId],
+  successfulMatches: [matchId]
 }
 
 ```
@@ -76,9 +76,11 @@ Match model
 
 ```javascript
 {
-  dogOneAnswer: Boolean,
-  dogTwoAnswer: Boolean,
-  succes: Boolean,
+  dogOneId: {type: Schema.Types.ObjectId, ref:"Doggy"},
+  dogTwoId: {type: Schema.Types.ObjectId, ref:"Doggy"}
+  dogOneAnswer: { type: String, enum: ["like","reject","pending"], default: "pending" },
+  dogTwoAnswer: { type: String, enum: ["like","reject","pending"], default: "pending" },
+  success: { type: String, enum: ["success","rejected","awaiting"], default: "awaiting" },
 }
 
 ```
