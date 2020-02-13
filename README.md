@@ -100,6 +100,6 @@ Match model
 
 [Deploy Link](http://heroku.com) TO BE DONE
 
-### Slides
+### Slides 
 
 [Slides Link](https://docs.google.com/presentation/d/1maTh19snJx0KqOmr5Z6mSbECEX2EyE4BDtyz2u09eM8/edit?usp=sharing)
