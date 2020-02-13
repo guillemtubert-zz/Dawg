@@ -48,9 +48,7 @@ Homepage
 | `GET`      | `/private/favorites`               | Private route. Render the `favorites` view.                  |                                                          |
 | `POST`     | `/private/favorites/`              | Private route. Adds a new favorite for the current user.     | { name, cuisine, city, }                                 |
 | `DELETE`   | `/private/favorites/:restaurantId` | Private route. Deletes the existing favorite from the current user. |                                                          |
-                                                    |
-
-
+                                  
 
 
 
