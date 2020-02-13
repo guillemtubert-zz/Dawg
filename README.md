@@ -58,26 +58,30 @@ Homepage
 
 ## Models
 
+## Models
+
 Doggy model
- 
-```
-username: String
-password: String
-Dog profile {
-  name
-  age
-  breed
-  location
-  differents options of happines, etc
+
+```javascript
+{
+  name: String,
+  email: String,
+  password: String,
+  favorites: [FavoriteId],
 }
+
 ```
+
+
 
 Match model
 
+```javascript
+{
+  placeId: String,
+}
+
 ```
-Request if the dog1 ID and the dog2 ID likes eachother and if it does, let them start a new chat.
-tbd
-``` 
 
 ## Links
 
