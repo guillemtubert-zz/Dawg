@@ -64,13 +64,13 @@ Doggy model
 
 ```javascript
 {
-  name: String,
   email: String,
   password: String,
+  dogName: String,
   breed: String,
   age: Number,
-  Activity: String, enum: ["Friendly", "Shy", "Playful"],
-  favoriteDogs: [FavoriteDogId],
+  Activity: String, enum: ["Shy","Friendly","Very Sociable"],
+  favoriteDogs: [FavoriteDogIds],
 }
 
 ```
