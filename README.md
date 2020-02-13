@@ -67,7 +67,10 @@ Doggy model
   name: String,
   email: String,
   password: String,
-  favorites: [FavoriteId],
+  breed: String,
+  age: Number,
+  Activity: String, enum: ["Friendly", "Shy", "Playful"],
+  favoriteDogs: [FavoriteDogId],
 }
 
 ```
