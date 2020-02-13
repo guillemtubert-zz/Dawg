@@ -81,7 +81,9 @@ Match model
 
 ```javascript
 {
-  placeId: String,
+  dogOneAnswer: Boolean,
+  dogTwoAnswer: Boolean,
+  succes: Boolean,
 }
 
 ```
