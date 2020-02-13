@@ -2,7 +2,7 @@
 
 ## Description
 
-Doggy is an app to meet new dogs arround you. You can create a profile, find for new dog friends and chat with them!
+Doggy is an app to meet new dogs arround you. You can create a profile, search for new dog friends and chat with them!
  
 ## User Stories
 
