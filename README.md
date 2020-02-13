@@ -10,7 +10,7 @@ Doggy is an app to meet new dogs arround you. You can create a profile, search f
 - **sign up** - As a user I want to sign up on the webpage so that I can see all the events that I could attend
 - **login** - As a user I want to be able to log in on the webpage so that I can get back to my account
 - **logout** - As a user I want to be able to log out from the webpage so that I can make sure no one will access my account
-- **ematch** - see new dogs.
+- **match** - see new dogs.
 - **Direct Messages** - Chat with the dogs you've matched!
 - **Profile** - See your profile. Edit it and change the search settings
 
