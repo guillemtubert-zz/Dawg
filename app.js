@@ -10,11 +10,11 @@ const MongoStore = require('connect-mongo')(session);
 const router = require('./routes/index');
 
 const dbName = "Dog-Network";
-const PORT = 3000;
+// const PORT = 3000;
 
 const app = express();
 
-mongoose.connect(`mongodb://localhost:${PORT}/${dbName}`, {
+mongoose.connect(`mongodb://localhost:27017/${dbName}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
