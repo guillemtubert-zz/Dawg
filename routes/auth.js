@@ -13,6 +13,8 @@ authRouter.post("/signup", (req, res) => {
 // 3 - Deconstruct the `username` and `password` from req.body
     const { email, password, dogName, age, phoneNumber, breed, image, activity } = req.body;
 
+console.log(req.body);
+
 // 4 - Check if `username` or `password` are empty and display error message
 if (password === "" || email === "" || dogName === "" || phoneNumber === "" || age === "") {
     res.render("auth/signup-form", {
@@ -35,6 +37,8 @@ Dog.findOne( { email } )
 // > If `username` doesn't exist generate salts and hash the password
       const salt = bcrypt.genSaltSync(saltRounds);
       const hashedPassword = bcrypt.hashSync(password, salt);
+
+      console.log(hashedPassword)
 
       Dog.create({ email, password: hashedPassword, dogName, age, phoneNumber, breed, image, activity })
         .then(createUser => {
