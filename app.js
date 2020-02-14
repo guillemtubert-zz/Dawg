@@ -8,12 +8,17 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
 const router = require('./routes/index');
+const profileRouter = require ('./routes/site-routes.js')
 
 const dbName = "Dog-Network";
+<<<<<<< HEAD
+=======
+// const PORT = 3000;
+>>>>>>> 83bba1d38996d1af472b77d90aed567b8a4f42c2
 
 const app = express();
 
-mongoose.connect(`mongodb://localhost:${PORT}/${dbName}`, {
+mongoose.connect(`mongodb://localhost:27017/${dbName}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -43,8 +48,9 @@ app.use(
   })
 );
 
+// ROUTER
 app.use('/', router);
-
+app.use('/', profileRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
