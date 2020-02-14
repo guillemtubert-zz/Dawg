@@ -10,7 +10,6 @@ const MongoStore = require('connect-mongo')(session);
 const router = require('./routes/index');
 
 const dbName = "Dog-Network";
-const PORT = 3000;
 
 const app = express();
 
