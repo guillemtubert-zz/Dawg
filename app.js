@@ -44,6 +44,7 @@ app.use(
   })
 );
 
+// ROUTER
 app.use('/', router);
 
 // catch 404 and forward to error handler

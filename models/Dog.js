@@ -11,7 +11,7 @@ const dogSchema = new Schema(
   age: { type: Number, min: 0, max: 20,required: true },
   image: { type: String, default: "https://i.pinimg.com/originals/fa/6b/7b/fa6b7b4aa80577ecc8cb475922e9227d.jpg" },
   activity: { type: String, enum: ["Shy","Friendly","Very Sociable"], required: true},
-  interactions: [matchId],
+  interactions: ["matchId"],
   searchPreferences :{
     breed: { type: String, enum: ['bulldog', 'shi tzu', 'everything'], required: true},
     ageMin : { type: Number, min: 0, max: 19,required: true },

@@ -8,9 +8,6 @@ const profileRouter = require("./profile");
 router.use("/auth", authRouter);
 router.use("/profile", profileRouter);
 
-// Secret pages: logout, match, profile, chat
-router.use("/", profileRouter); 
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

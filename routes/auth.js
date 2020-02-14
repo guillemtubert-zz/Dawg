@@ -9,7 +9,7 @@ const zxcvbn = require("zxcvbn");
 const saltRounds = 10;
 
 // POST '/'
-authRouter.post("/", (req, res) => {
+authRouter.post("/signup", (req, res) => {
 // 3 - Deconstruct the `username` and `password` from req.body
     const { email, password } = req.body;
 
@@ -22,7 +22,7 @@ if (password === "" || email === "") {
 }
 
 Dog.findOne( { email } )
-    .then( (user => {
+    .then( user => {
 //if `username` already exists in the DB and display error message
       if (user) {
           console.log("THIS IS THE USER:", user);
@@ -31,10 +31,39 @@ Dog.findOne( { email } )
             });
             return;
       }  
-    
 
-      
-})
-    
-    
-    //.catch( (err) => console.log(err));
+// > If `username` doesn't exist generate salts and hash the password
+      const salt = bcrypt.genSaltSync(saltRounds);
+      const hashedPassword = bcrypt.hashSync(password, salt);
+
+      Dog.create({ email, password: hashedPassword })
+        .then(createUser => res.redirect("/"))
+        .catch(err => {
+          res.render("auth/signup-form", {
+            errorMessage: "Error while creating the new user."
+          });
+        });
+    })
+    .catch(err => console.log(err));
+
+// > After hashing the password, create new user in DB
+
+  // >  When the new user is created, redirect to '/home' page
+
+  // catch errors from User.findOne
+});
+
+// GET    /signup
+authRouter.get("/signup", (req, res) => {
+  res.render("auth/signup-form");
+});
+
+authRouter.get("/login", (req, res) => {
+    res.render("auth/login-form");
+  });
+
+  authRouter.post("/login", (req, res) => {
+    const { email, password } = req.body;
+  })
+
+module.exports = authRouter;
