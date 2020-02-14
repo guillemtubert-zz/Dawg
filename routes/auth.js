@@ -11,10 +11,10 @@ const saltRounds = 10;
 // POST '/'
 authRouter.post("/signup", (req, res) => {
 // 3 - Deconstruct the `username` and `password` from req.body
-    const { email, password } = req.body;
+    const { email, password, dogName, age, phoneNumber, breed, image, activity } = req.body;
 
 // 4 - Check if `username` or `password` are empty and display error message
-if (password === "" || email === "") {
+if (password === "" || email === "" || dogName === "" || phoneNumber === "" || age === "") {
     res.render("auth/signup-form", {
       errorMessage: "Username and Password are required"
     });
@@ -36,8 +36,11 @@ Dog.findOne( { email } )
       const salt = bcrypt.genSaltSync(saltRounds);
       const hashedPassword = bcrypt.hashSync(password, salt);
 
-      Dog.create({ email, password: hashedPassword })
-        .then(createUser => res.redirect("/"))
+      Dog.create({ email, password: hashedPassword, dogName, age, phoneNumber, breed, image, activity })
+        .then(createUser => {
+        req.session.currentUser= createUser;
+          res.render("index") //Donde queremos que vaya despues del register
+      })
         .catch(err => {
           res.render("auth/signup-form", {
             errorMessage: "Error while creating the new user."
@@ -64,6 +67,12 @@ authRouter.get("/login", (req, res) => {
 
   authRouter.post("/login", (req, res) => {
     const { email, password } = req.body;
+  });
+
+  authRouter.get('/logout', (req, res) => {
+    req.session.destroy( (err) => {
+      res.redirect('/login')
+    })
   })
 
 module.exports = authRouter;
