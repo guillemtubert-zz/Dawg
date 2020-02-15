@@ -1,34 +1,56 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="/stylesheets/signupform.css">
+  {{!-- <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'> --}}
+</head>
+<body>
+
 <form action="/auth/signup" method="post">
 
-  <label for="">E-mail</label>
-  <input type="text" name="email">
-
-  <label for="">Password</label>
-  <input type="password" name="password">
-
-  <label for="">Dog name</label>
-  <input type="text" name="dogName">
-
-  <label for="">Age</label>
-  <input type="number" name="age">
-
-  <label for="">Breed</label>
-  <input type="text" name="breed">
-
-  <label for="">Activity</label>
-  <input type="text" name="activity">
-
-  <label for="">Phone number</label>
-  <input type="number" name="phoneNumber">
-
-  <label for="">Profile picture</label>
-  <input type="image" name="image">
-     
-
-  <button>Next</button>
-
+  <h1>Sign Up</h1>
+  
+  <fieldset>
+    <legend><span class="number">1</span>Your basic info</legend>
+    <label for="">E-mail</label>
+    <input type="text" name="email">
+  
+    <label for="">Password</label>
+    <input type="password" name="password">
+  
+    <label for="">Dog name</label>
+    <input type="text" name="dogName">
+  
+    <label for="">Age</label>
+    <input type="number" name="age">
+  
+    <label for="">breed
+    <select id="breed" name="breed">
+      <option value="bulldog">bulldog</option>
+      <option value="shi tzu">shi tzu</option>
+      <option value="everything">everything</option>
+    </select>
+    </label>
+  
+    <label for="">activity
+    <select id="activity" name="activity">
+      <option value="Shy">Shy</option>
+      <option value="Friendly">Friendly</option>
+      <option value="Very Sociable">Very Sociable</option>
+    </select>
+    </label>
+  
+    <label for="">Phone number</label>
+    <input type="number" name="phoneNumber">
+  
+    <label for="">Profile picture</label>
+    <input type="image" name="image">
+  
+    
+  </fieldset>
+  <button type="submit">Sign Up</button>
 </form>
 
-{{#if errorMessage}}
-<p>{{errorMessage}}</p>
-{{/if}}
+</body>
+</html>

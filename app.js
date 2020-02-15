@@ -1,8 +1,6 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
@@ -11,26 +9,21 @@ const router = require('./routes/index');
 const profileRouter = require ('./routes/site-routes.js')
 
 const dbName = "Dog-Network";
-<<<<<<< HEAD
-=======
 // const PORT = 3000;
->>>>>>> 83bba1d38996d1af472b77d90aed567b8a4f42c2
 
 const app = express();
 
 mongoose.connect(`mongodb://localhost:27017/${dbName}`, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
