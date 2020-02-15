@@ -69,11 +69,11 @@ authRouter.get("/login", (req, res) => {
     res.render("auth/login-form");
   });
 
-  authRouter.post("/login", (req, res) => {
+authRouter.post("/login", (req, res) => {
     const { email, password } = req.body;
   });
 
-  authRouter.get('/logout', (req, res) => {
+authRouter.get('/logout', (req, res) => {
     req.session.destroy( (err) => {
       res.redirect('/login')
     })
