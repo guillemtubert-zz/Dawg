@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 const dogSchema = new Schema(
   {
+  dogName: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
-  dogName: { type: String, required: true },
   age: { type: Number, min: 0, max: 20,required: true },
-  phoneNumber: { type: Number, required: true },
+  phoneNumber: { type: String, required: true },
   breed: { type: String},
   image: { type: String, default: "https://i.pinimg.com/originals/fa/6b/7b/fa6b7b4aa80577ecc8cb475922e9227d.jpg" },
   activity: { type: String},

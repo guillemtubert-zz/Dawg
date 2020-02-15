@@ -11,7 +11,7 @@ const saltRounds = 10;
 // POST '/'
 authRouter.post("/signup", (req, res) => {
 // 3 - Deconstruct the `username` and `password` from req.body
-    const { email, password, dogName, age, phoneNumber, breed, image, activity } = req.body;
+    const { dogName, email, password, age, phoneNumber, breed, image, activity } = req.body;
 
 console.log(req.body);
 
