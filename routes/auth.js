@@ -11,9 +11,14 @@ const saltRounds = 10;
 // POST '/'
 authRouter.post("/signup", (req, res) => {
 // 3 - Deconstruct the `username` and `password` from req.body
-    const { dogName, email, password, age, phoneNumber, breed, image, activity } = req.body;
-
-console.log(req.body);
+    const { dogName, email, password, age, phoneNumber, breed, image, activity, searchAgeMin, searchAgeMax, searchBreed} = req.body;
+    
+    const searchPreferencesObj = {
+      breed: searchBreed,
+      ageMin : searchAgeMin,
+      ageMax : searchAgeMax
+    }
+console.log("req body",req.body);
 
 // 4 - Check if `username` or `password` are empty and display error message
 if (password === "" || email === "" || dogName === "" || phoneNumber === "" || age === "") {
@@ -40,7 +45,7 @@ Dog.findOne( { email } )
 
       console.log(hashedPassword)
 
-      Dog.create({ email, password: hashedPassword, dogName, age, phoneNumber, breed, image, activity })
+      Dog.create({ email, password: hashedPassword, dogName, age, phoneNumber, breed, image, activity, searchPreferences: searchPreferencesObj })
         .then(createUser => {
         req.session.currentUser= createUser;
           res.render("index") //Donde queremos que vaya despues del register
@@ -71,6 +76,38 @@ authRouter.get("/login", (req, res) => {
 
 authRouter.post("/login", (req, res) => {
     const { email, password } = req.body;
+
+    if (password === "" || email === "") {
+      res.render("auth/login-form", {
+        errorMessage: "Email and Password are required"
+      });
+      return;
+    }
+console.log("email is:",email);
+    Dog.findOne({email})
+    .then(user => {
+      if (!user) {
+        res.render("auth/login-form", {
+          errorMessage: "The email doesn't exist."
+        });
+        return;
+      }
+
+      const passwordFromDB = user.password;
+
+      const passwordCorrect = bcrypt.compareSync(password, passwordFromDB);
+
+      if(passwordCorrect) {
+        //SAVE THE LOGIN SESSION 
+        req.session.currentUser = user;
+        res.redirect("/");
+      } else {
+        res.render("auth/login-form", {
+          errorMessage: "Incorrect password..."
+        });
+      }
+    })
+    .catch(err => console.log(err));
   });
 
 authRouter.get('/logout', (req, res) => {

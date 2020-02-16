@@ -1,5 +1,6 @@
 var express = require("express");
 var siteRouter = express.Router();
+const Dog = require("../models/Dog");
 
 // AUTHENTICATION CHECKER
 siteRouter.use((req, res, next) => {
@@ -10,15 +11,23 @@ siteRouter.use((req, res, next) => {
   	res.redirect("/auth/login");
   }                     
 });																
-
 siteRouter.get('/match',  (req, res) => {
   res.render('match')
 });
-
 siteRouter.get('/profile',  (req, res) => {
-  res.render('profile')
-});
+  const {_id} = req.session.currentUser;
 
+  //doc.find by id to 
+  Dog.findOne({_id})
+  .then( (dogProfile) => {
+    
+    const {dogName, age, phoneNumber, breed, image, activity} = dogProfile;
+    res.render('profile', {dogName, age, phoneNumber, breed, image, activity});
+  })
+  .catch( (err) => console.log(err));
+
+  // 
+});
 siteRouter.get('/swipe',  (req, res) => {
   res.render('swipe')
 });

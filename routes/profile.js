@@ -1,9 +1,5 @@
 var express = require("express");
-// const profileRouter = express.Router();
-/*
-editRouter
-swipeRouter
-matchRouter
-*/
+const profileRouter = express.Router();
+
 
 // module.exports = profileRouter;

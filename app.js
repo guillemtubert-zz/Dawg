@@ -6,6 +6,8 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
 const router = require('./routes/index');
+// const profileRouter = require ('./routes/site-routes.js')
+// commented bc we aren't sure to add it here
 
 const dbName = "Dog-Network";
 // const PORT = 3000;
@@ -42,6 +44,10 @@ app.use(
 
 // ROUTER
 app.use('/', router);
+<<<<<<< HEAD
+=======
+// app.use('/', profileRouter)
+>>>>>>> ed455d636cec7e0fbbf0f0e8b0e0156434adc176
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
