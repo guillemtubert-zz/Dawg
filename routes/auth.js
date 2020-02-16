@@ -101,7 +101,7 @@ console.log("email is:",email);
       if(passwordCorrect) {
         //SAVE THE LOGIN SESSION 
         req.session.currentUser = user;
-        res.redirect("/profile/swipe");
+        res.redirect();
       } else {
         res.render("auth/login-form", {
           errorMessage: "Incorrect password..."
