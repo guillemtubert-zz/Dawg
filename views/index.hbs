@@ -1,5 +1,21 @@
-<h1>{{title}}</h1>
+<img src="https://files.slack.com/files-pri/T02CQ4EN4-FU2HG6HBP/logo2.png" alt="Logo">
 
-<button><a href="/auth/login">LOG IN</a></button>
-<button><a href="/auth/signup">SIGN UP</a></button>
+<form action="/auth/login" method="POST" id="form">
+  <h2>Login</h2>
 
+  <label for="email">Email</label>
+  <input type="text" name="email">
+<br>
+  <label for="password">Password</label>
+  <input type="password" name="password">
+
+<div ></div>
+  <h3></h3><button type="submit">Login</button>
+</form>
+
+{{#if errorMessage }}
+<div class="error-message">{{ errorMessage }}</div>
+{{/if}}
+
+
+<h4>Don't have an account? <a href="/auth/signup">Register now!</a></h4>
