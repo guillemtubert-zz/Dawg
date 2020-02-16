@@ -1,1504 +1,1602 @@
 const dogs = [
-    {
-      "dogName": "Watkins",
-      "email": "watkins@watkinsmail",
-      "password": "cb3a53ad-baec-4caa-a77e-aaa8721725ef",
-      "phoneNumber": "+1 (993) 456-2078",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 6,
-        "ageMax": 17
-      }
-    },
-    {
-      "dogName": "Ferrell",
-      "email": "ferrell@ferrellmail",
-      "password": "0cdc92b0-c51f-4bbf-9264-bb56a9ba56c3",
-      "phoneNumber": "+1 (898) 583-3419",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 12,
-        "ageMax": 20
-      }
-    },
-    {
-      "dogName": "Patel",
-      "email": "patel@patelmail",
-      "password": "8dba6846-3f19-4409-a6da-7f8767253f24",
-      "phoneNumber": "+1 (985) 531-2147",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 19,
-        "ageMax": 14
-      }
-    },
-    {
-      "dogName": "Palmer",
-      "email": "palmer@palmermail",
-      "password": "3cf18b00-e8eb-4a7d-99d3-155cdf0c315a",
-      "phoneNumber": "+1 (900) 590-2808",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 2,
-        "ageMax": 18
-      }
-    },
-    {
-      "dogName": "Stephenson",
-      "email": "stephenson@stephensonmail",
-      "password": "c9fa2da7-8c1a-4519-83a4-4deff0eefda3",
-      "phoneNumber": "+1 (953) 413-2008",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 0,
-        "ageMax": 20
-      }
-    },
-    {
-      "dogName": "Walker",
-      "email": "walker@walkermail",
-      "password": "4d114611-91a6-4fcd-9b08-761b128f8087",
-      "phoneNumber": "+1 (874) 492-2119",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 4,
-        "ageMax": 9
-      }
-    },
-    {
-      "dogName": "Lessie",
-      "email": "lessie@lessiemail",
-      "password": "e7390425-7a82-4dbd-b5e9-229ee93b121e",
-      "phoneNumber": "+1 (807) 418-2306",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 12,
-        "ageMax": 9
-      }
-    },
-    {
-      "dogName": "Gamble",
-      "email": "gamble@gamblemail",
-      "password": "daf1f3ef-cb46-44a2-a5ab-66d69a09cb5c",
-      "phoneNumber": "+1 (819) 427-2015",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 0,
-        "ageMax": 8
-      }
-    },
-    {
-      "dogName": "Huber",
-      "email": "huber@hubermail",
-      "password": "b201fffa-bf8f-458d-8d6e-78899d573941",
-      "phoneNumber": "+1 (845) 501-2335",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 15,
-        "ageMax": 2
-      }
-    },
-    {
-      "dogName": "Eve",
-      "email": "eve@evemail",
-      "password": "67acff61-f573-469f-baac-266a0a21e5ed",
-      "phoneNumber": "+1 (901) 575-3754",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 16,
-        "ageMax": 10
-      }
-    },
-    {
-      "dogName": "Day",
-      "email": "day@daymail",
-      "password": "d410aa05-1499-4dca-bc7a-cf1967cabbf4",
-      "phoneNumber": "+1 (872) 523-2842",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 11,
-        "ageMax": 7
-      }
-    },
-    {
-      "dogName": "Dianne",
-      "email": "dianne@diannemail",
-      "password": "9139eb9d-5621-46cb-84da-1faa36682a09",
-      "phoneNumber": "+1 (898) 507-3717",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 1,
-        "ageMax": 10
-      }
-    },
-    {
-      "dogName": "Holland",
-      "email": "holland@hollandmail",
-      "password": "07f942a3-081f-448b-97ce-8b33e95336e9",
-      "phoneNumber": "+1 (974) 400-3757",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 12,
-        "ageMax": 17
-      }
-    },
-    {
-      "dogName": "Kellie",
-      "email": "kellie@kelliemail",
-      "password": "cc11e48f-251a-4300-b9d0-cd22cbc66862",
-      "phoneNumber": "+1 (890) 587-3069",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 1,
-        "ageMax": 17
-      }
-    },
-    {
-      "dogName": "Marcella",
-      "email": "marcella@marcellamail",
-      "password": "6f404d09-676c-430a-a03e-f6a68b7a0dff",
-      "phoneNumber": "+1 (934) 448-3855",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 16,
-        "ageMax": 14
-      }
-    },
-    {
-      "dogName": "Koch",
-      "email": "koch@kochmail",
-      "password": "03076e33-5c8e-41c5-a8ef-1da9c6c76be4",
-      "phoneNumber": "+1 (834) 421-3121",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 18,
-        "ageMax": 15
-      }
-    },
-    {
-      "dogName": "Chandler",
-      "email": "chandler@chandlermail",
-      "password": "5d89273b-a161-4745-8ac7-7b8e82d0b8ba",
-      "phoneNumber": "+1 (989) 495-2206",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 3,
-        "ageMax": 10
-      }
-    },
-    {
-      "dogName": "Suzanne",
-      "email": "suzanne@suzannemail",
-      "password": "0ef2b22c-9153-45e5-b274-a368636ae569",
-      "phoneNumber": "+1 (801) 585-2287",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 18,
-        "ageMax": 2
-      }
-    },
-    {
-      "dogName": "Mcclain",
-      "email": "mcclain@mcclainmail",
-      "password": "39432083-3bfc-44f2-8839-5c8ad673f406",
-      "phoneNumber": "+1 (956) 573-3151",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 0,
-        "ageMax": 11
-      }
-    },
-    {
-      "dogName": "Luann",
-      "email": "luann@luannmail",
-      "password": "25c25de5-e467-4a86-92be-a4e468de4e2d",
-      "phoneNumber": "+1 (962) 412-2617",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 13,
-        "ageMax": 12
-      }
-    },
-    {
-      "dogName": "Jo",
-      "email": "jo@jomail",
-      "password": "168c7ccb-5b94-442c-bda4-004f4edddd1d",
-      "phoneNumber": "+1 (872) 580-3392",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 5,
-        "ageMax": 14
-      }
-    },
-    {
-      "dogName": "Reilly",
-      "email": "reilly@reillymail",
-      "password": "a6946b5b-aa51-4773-8a45-080c61c8f276",
-      "phoneNumber": "+1 (848) 483-2833",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 7,
-        "ageMax": 3
-      }
-    },
-    {
-      "dogName": "Buckner",
-      "email": "buckner@bucknermail",
-      "password": "28ced8fb-4e15-4462-97f3-fea3f8bf4713",
-      "phoneNumber": "+1 (876) 548-2650",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 12,
-        "ageMax": 2
-      }
-    },
-    {
-      "dogName": "Katy",
-      "email": "katy@katymail",
-      "password": "4ce2bd97-1aec-4dcc-9c79-977b4abda804",
-      "phoneNumber": "+1 (893) 424-3152",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 17,
-        "ageMax": 17
-      }
-    },
-    {
-      "dogName": "Callahan",
-      "email": "callahan@callahanmail",
-      "password": "1ee22f40-01b9-430f-a657-2fb73a9cb76a",
-      "phoneNumber": "+1 (889) 489-2204",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 19,
-        "ageMax": 1
-      }
-    },
-    {
-      "dogName": "Dorsey",
-      "email": "dorsey@dorseymail",
-      "password": "f622a47b-55b0-4bae-af7a-9e7874e67acf",
-      "phoneNumber": "+1 (834) 517-3930",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 16,
-        "ageMax": 2
-      }
-    },
-    {
-      "dogName": "Meyers",
-      "email": "meyers@meyersmail",
-      "password": "37484fe7-feb8-4305-aaf9-d0eb6c9841e0",
-      "phoneNumber": "+1 (981) 451-3105",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 13,
-        "ageMax": 15
-      }
-    },
-    {
-      "dogName": "Bradford",
-      "email": "bradford@bradfordmail",
-      "password": "6646fb2a-1b5f-4813-9f90-6970a79de933",
-      "phoneNumber": "+1 (825) 599-3304",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 15,
-        "ageMax": 4
-      }
-    },
-    {
-      "dogName": "Naomi",
-      "email": "naomi@naomimail",
-      "password": "86c1d3f1-a8c9-44b0-a143-faf480e8757b",
-      "phoneNumber": "+1 (929) 422-2251",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 13,
-        "ageMax": 9
-      }
-    },
-    {
-      "dogName": "Lauri",
-      "email": "lauri@laurimail",
-      "password": "e32c3446-b211-4938-b1b8-4c3d521bc8d8",
-      "phoneNumber": "+1 (985) 428-3253",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 2,
-        "ageMax": 14
-      }
-    },
-    {
-      "dogName": "Mays",
-      "email": "mays@maysmail",
-      "password": "18b0889d-2165-4afb-bf71-4e4dca1b4a0d",
-      "phoneNumber": "+1 (839) 596-3241",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 8,
-        "ageMax": 13
-      }
-    },
-    {
-      "dogName": "Guzman",
-      "email": "guzman@guzmanmail",
-      "password": "a8db0152-7d41-4fc5-b9fc-09dae782c89b",
-      "phoneNumber": "+1 (935) 418-3907",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 9,
-        "ageMax": 16
-      }
-    },
-    {
-      "dogName": "Mcdonald",
-      "email": "mcdonald@mcdonaldmail",
-      "password": "de933051-6ef5-435c-bfaa-3e4f38c3ac75",
-      "phoneNumber": "+1 (801) 462-2003",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 14,
-        "ageMax": 18
-      }
-    },
-    {
-      "dogName": "Williamson",
-      "email": "williamson@williamsonmail",
-      "password": "a5e6e4ad-d8e9-4e8d-8aa2-dd9e2581f251",
-      "phoneNumber": "+1 (813) 486-2172",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 18,
-        "ageMax": 10
-      }
-    },
-    {
-      "dogName": "Marion",
-      "email": "marion@marionmail",
-      "password": "7e5a1f98-a310-4f06-8ec3-818e76cd92fe",
-      "phoneNumber": "+1 (945) 453-2998",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 7,
-        "ageMax": 3
-      }
-    },
-    {
-      "dogName": "Ramsey",
-      "email": "ramsey@ramseymail",
-      "password": "e130a366-f63c-40c5-96b4-54f01c3ad7f3",
-      "phoneNumber": "+1 (969) 524-3533",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 16,
-        "ageMax": 20
-      }
-    },
-    {
-      "dogName": "Flossie",
-      "email": "flossie@flossiemail",
-      "password": "9fdbc04d-df7a-466e-bf7f-2e32649951d3",
-      "phoneNumber": "+1 (913) 573-3919",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 2,
-        "ageMax": 7
-      }
-    },
-    {
-      "dogName": "Marie",
-      "email": "marie@mariemail",
-      "password": "883b5394-8a04-4e95-b6c4-e4f193d3a3ea",
-      "phoneNumber": "+1 (817) 424-3786",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 6,
-        "ageMax": 8
-      }
-    },
-    {
-      "dogName": "Doris",
-      "email": "doris@dorismail",
-      "password": "3c4563d2-1c4a-4a7f-bb9c-30595c9c1f0a",
-      "phoneNumber": "+1 (836) 425-2214",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 18,
-        "ageMax": 5
-      }
-    },
-    {
-      "dogName": "Workman",
-      "email": "workman@workmanmail",
-      "password": "3cd7b74f-5d80-465c-9b7f-d5b40807d17c",
-      "phoneNumber": "+1 (930) 555-2634",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 4,
-        "ageMax": 17
-      }
-    },
-    {
-      "dogName": "Serrano",
-      "email": "serrano@serranomail",
-      "password": "fdfb45a7-f66a-4416-a5b8-14f38d9a2bbb",
-      "phoneNumber": "+1 (837) 413-2002",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 19,
-        "ageMax": 7
-      }
-    },
-    {
-      "dogName": "Anderson",
-      "email": "anderson@andersonmail",
-      "password": "fa1279c6-f08c-4426-8d16-c6a69206ce44",
-      "phoneNumber": "+1 (990) 482-2861",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 7,
-        "ageMax": 9
-      }
-    },
-    {
-      "dogName": "Rutledge",
-      "email": "rutledge@rutledgemail",
-      "password": "e6817191-ebb6-4349-a4fd-c8a7b30080ef",
-      "phoneNumber": "+1 (901) 426-2641",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 5,
-        "ageMax": 10
-      }
-    },
-    {
-      "dogName": "Maryellen",
-      "email": "maryellen@maryellenmail",
-      "password": "d5adebd4-5be3-4091-a21f-3cf941c998f3",
-      "phoneNumber": "+1 (878) 592-2551",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 4,
-        "ageMax": 10
-      }
-    },
-    {
-      "dogName": "Middleton",
-      "email": "middleton@middletonmail",
-      "password": "e3dcd214-6f52-4bc0-b2de-fd9b4d3bfd31",
-      "phoneNumber": "+1 (945) 492-3560",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 5,
-        "ageMax": 18
-      }
-    },
-    {
-      "dogName": "Viola",
-      "email": "viola@violamail",
-      "password": "6783035d-535b-46ae-8c41-e2bc16a54ec7",
-      "phoneNumber": "+1 (879) 482-3388",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 15,
-        "ageMax": 18
-      }
-    },
-    {
-      "dogName": "Kristy",
-      "email": "kristy@kristymail",
-      "password": "717e1083-32fb-4c87-89f2-96208ec29de5",
-      "phoneNumber": "+1 (854) 418-2449",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 19,
-        "ageMax": 3
-      }
-    },
-    {
-      "dogName": "Macdonald",
-      "email": "macdonald@macdonaldmail",
-      "password": "2dd57830-714d-4445-b4a0-79616270bcc8",
-      "phoneNumber": "+1 (916) 447-2841",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 18,
-        "ageMax": 19
-      }
-    },
-    {
-      "dogName": "Sandra",
-      "email": "sandra@sandramail",
-      "password": "23437561-67de-416e-a58a-52587a5444f7",
-      "phoneNumber": "+1 (848) 525-2682",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 4,
-        "ageMax": 20
-      }
-    },
-    {
-      "dogName": "Vera",
-      "email": "vera@veramail",
-      "password": "0d63e473-71ba-4bc6-adfb-a82b7e7cb3e7",
-      "phoneNumber": "+1 (845) 448-3515",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 9,
-        "ageMax": 4
-      }
-    },
-    {
-      "dogName": "Mariana",
-      "email": "mariana@marianamail",
-      "password": "ab4ef52c-95bb-4ec5-ad0c-285d86c4af4a",
-      "phoneNumber": "+1 (929) 570-3231",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 15,
-        "ageMax": 19
-      }
-    },
-    {
-      "dogName": "Campos",
-      "email": "campos@camposmail",
-      "password": "d5705470-1913-4f0b-ac43-5d1a0e2df979",
-      "phoneNumber": "+1 (967) 541-3275",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 14,
-        "ageMax": 8
-      }
-    },
-    {
-      "dogName": "Celina",
-      "email": "celina@celinamail",
-      "password": "37b5f1ca-d077-4c80-af45-bda1db38bcf2",
-      "phoneNumber": "+1 (829) 525-2482",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 8,
-        "ageMax": 8
-      }
-    },
-    {
-      "dogName": "Wiggins",
-      "email": "wiggins@wigginsmail",
-      "password": "f1380ad9-d6e1-4b92-9cd3-36b7149df03f",
-      "phoneNumber": "+1 (864) 515-2672",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 12,
-        "ageMax": 9
-      }
-    },
-    {
-      "dogName": "Michele",
-      "email": "michele@michelemail",
-      "password": "2d32dcb2-cc0d-427c-bd0f-a654c96de32a",
-      "phoneNumber": "+1 (955) 525-2413",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 3,
-        "ageMax": 18
-      }
-    },
-    {
-      "dogName": "Goldie",
-      "email": "goldie@goldiemail",
-      "password": "268339d6-1b67-43b7-ade9-dbb6c5dc3a9a",
-      "phoneNumber": "+1 (891) 460-2799",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 8,
-        "ageMax": 13
-      }
-    },
-    {
-      "dogName": "Tyler",
-      "email": "tyler@tylermail",
-      "password": "90bb90fb-2147-4b0d-8c4d-0dc6b0f7d970",
-      "phoneNumber": "+1 (990) 528-2955",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 8,
-        "ageMax": 14
-      }
-    },
-    {
-      "dogName": "Christine",
-      "email": "christine@christinemail",
-      "password": "2a97728d-09e3-469b-b0cf-f58d9a71097f",
-      "phoneNumber": "+1 (892) 450-3011",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 3,
-        "ageMax": 2
-      }
-    },
-    {
-      "dogName": "Michelle",
-      "email": "michelle@michellemail",
-      "password": "a8cb9aec-9ecb-4c5f-936e-39e08afe9171",
-      "phoneNumber": "+1 (892) 568-3362",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 18,
-        "ageMax": 3
-      }
-    },
-    {
-      "dogName": "Marcy",
-      "email": "marcy@marcymail",
-      "password": "0923d5e8-5836-4ccb-8ca4-d1655aea7e80",
-      "phoneNumber": "+1 (881) 595-3076",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 12,
-        "ageMax": 7
-      }
-    },
-    {
-      "dogName": "Mosley",
-      "email": "mosley@mosleymail",
-      "password": "d4616cd8-9fa4-4f0e-b3d5-5356032a2ff0",
-      "phoneNumber": "+1 (916) 558-2852",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 7,
-        "ageMax": 2
-      }
-    },
-    {
-      "dogName": "Dolly",
-      "email": "dolly@dollymail",
-      "password": "7c0bd9cf-347d-4b2b-b7de-2ea00e32111e",
-      "phoneNumber": "+1 (844) 594-2189",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 17,
-        "ageMax": 16
-      }
-    },
-    {
-      "dogName": "Nadia",
-      "email": "nadia@nadiamail",
-      "password": "e9f065cc-02b1-4695-83d9-8fd2f3475e4a",
-      "phoneNumber": "+1 (892) 514-3175",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 16,
-        "ageMax": 3
-      }
-    },
-    {
-      "dogName": "Carrillo",
-      "email": "carrillo@carrillomail",
-      "password": "484414a0-16aa-458d-8212-a11ff1354a72",
-      "phoneNumber": "+1 (917) 456-3218",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 3,
-        "ageMax": 8
-      }
-    },
-    {
-      "dogName": "Flores",
-      "email": "flores@floresmail",
-      "password": "101dab81-467f-4bc3-8978-3471d040916a",
-      "phoneNumber": "+1 (811) 596-3865",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 13,
-        "ageMax": 1
-      }
-    },
-    {
-      "dogName": "Leblanc",
-      "email": "leblanc@leblancmail",
-      "password": "86f09b5c-9a59-4359-8a02-7dd590f2dfa7",
-      "phoneNumber": "+1 (975) 429-3371",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 7,
-        "ageMax": 7
-      }
-    },
-    {
-      "dogName": "Millicent",
-      "email": "millicent@millicentmail",
-      "password": "a6b18e14-2829-4622-8def-cb4ecc9b73ba",
-      "phoneNumber": "+1 (841) 493-2664",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 15,
-        "ageMax": 5
-      }
-    },
-    {
-      "dogName": "Beasley",
-      "email": "beasley@beasleymail",
-      "password": "a51610eb-4157-48be-b658-1b4c99fcaa70",
-      "phoneNumber": "+1 (916) 589-3736",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 19,
-        "ageMax": 6
-      }
-    },
-    {
-      "dogName": "Rena",
-      "email": "rena@renamail",
-      "password": "7b935a60-4006-4eef-adcc-336ee52b91eb",
-      "phoneNumber": "+1 (811) 584-2029",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 5,
-        "ageMax": 12
-      }
-    },
-    {
-      "dogName": "Vicki",
-      "email": "vicki@vickimail",
-      "password": "0ef6e060-fc37-4171-9956-5bfffbadf0a4",
-      "phoneNumber": "+1 (841) 426-3905",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 18,
-        "ageMax": 18
-      }
-    },
-    {
-      "dogName": "Georgette",
-      "email": "georgette@georgettemail",
-      "password": "51c358fb-99ff-4387-8d08-814419039b40",
-      "phoneNumber": "+1 (840) 533-3964",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 8,
-        "ageMax": 19
-      }
-    },
-    {
-      "dogName": "Clara",
-      "email": "clara@claramail",
-      "password": "9c42892d-9a9a-4d78-97a4-031b4d4dac77",
-      "phoneNumber": "+1 (913) 412-3056",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 11,
-        "ageMax": 10
-      }
-    },
-    {
-      "dogName": "Claudine",
-      "email": "claudine@claudinemail",
-      "password": "192053a9-8f12-4a9f-a3d0-876f5c493766",
-      "phoneNumber": "+1 (939) 451-2477",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 8,
-        "ageMax": 10
-      }
-    },
-    {
-      "dogName": "Mari",
-      "email": "mari@marimail",
-      "password": "15194f98-44ae-4910-97ba-e84adf98f015",
-      "phoneNumber": "+1 (807) 418-3831",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 10,
-        "ageMax": 16
-      }
-    },
-    {
-      "dogName": "Gonzalez",
-      "email": "gonzalez@gonzalezmail",
-      "password": "1fd51875-b58f-48ff-a685-80da089afa7f",
-      "phoneNumber": "+1 (948) 422-3152",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 2,
-        "ageMax": 10
-      }
-    },
-    {
-      "dogName": "Newton",
-      "email": "newton@newtonmail",
-      "password": "de94360e-2d25-4e8a-b72d-c95bc7d77b30",
-      "phoneNumber": "+1 (951) 511-3515",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 15,
-        "ageMax": 19
-      }
-    },
-    {
-      "dogName": "Alison",
-      "email": "alison@alisonmail",
-      "password": "3e0eb217-f8b0-4a8d-b2b6-02f66df34b29",
-      "phoneNumber": "+1 (997) 545-2334",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 13,
-        "ageMax": 11
-      }
-    },
-    {
-      "dogName": "Benjamin",
-      "email": "benjamin@benjaminmail",
-      "password": "1fe0cd50-4137-43e7-9ac5-54a5cf0a5430",
-      "phoneNumber": "+1 (992) 549-3342",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 4,
-        "ageMax": 12
-      }
-    },
-    {
-      "dogName": "Nannie",
-      "email": "nannie@nanniemail",
-      "password": "85d83627-1081-438f-a02b-6beedd72cbf3",
-      "phoneNumber": "+1 (811) 557-3683",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 11,
-        "ageMax": 18
-      }
-    },
-    {
-      "dogName": "Megan",
-      "email": "megan@meganmail",
-      "password": "892f80a9-5755-450f-b642-df72eff74d3b",
-      "phoneNumber": "+1 (823) 489-2422",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 15,
-        "ageMax": 18
-      }
-    },
-    {
-      "dogName": "Jean",
-      "email": "jean@jeanmail",
-      "password": "c8e07dbe-d037-4b8d-9a9b-cd924723fe05",
-      "phoneNumber": "+1 (885) 582-3971",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 16,
-        "ageMax": 13
-      }
-    },
-    {
-      "dogName": "Hodge",
-      "email": "hodge@hodgemail",
-      "password": "b88e48f5-04c2-4979-b504-e0b845ba842d",
-      "phoneNumber": "+1 (803) 592-3225",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 7,
-        "ageMax": 3
-      }
-    },
-    {
-      "dogName": "Ofelia",
-      "email": "ofelia@ofeliamail",
-      "password": "200d5abc-8d52-44e2-9330-86afe52f8f3e",
-      "phoneNumber": "+1 (996) 566-3543",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 18,
-        "ageMax": 16
-      }
-    },
-    {
-      "dogName": "Cote",
-      "email": "cote@cotemail",
-      "password": "0b182704-0f8b-43a9-9c06-7d6a83d4a5d9",
-      "phoneNumber": "+1 (985) 450-2525",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 15,
-        "ageMax": 8
-      }
-    },
-    {
-      "dogName": "May",
-      "email": "may@maymail",
-      "password": "4982c6e7-f1eb-438e-afdb-3616e0c184f4",
-      "phoneNumber": "+1 (865) 411-2834",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 15,
-        "ageMax": 17
-      }
-    },
-    {
-      "dogName": "Craig",
-      "email": "craig@craigmail",
-      "password": "7bd93a8f-3879-4316-93c0-d8e32653810d",
-      "phoneNumber": "+1 (885) 441-2087",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 7,
-        "ageMax": 2
-      }
-    },
-    {
-      "dogName": "Sampson",
-      "email": "sampson@sampsonmail",
-      "password": "63adf7a0-f975-4e87-8ec1-98800d03436d",
-      "phoneNumber": "+1 (803) 482-3650",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 18,
-        "ageMax": 12
-      }
-    },
-    {
-      "dogName": "Alejandra",
-      "email": "alejandra@alejandramail",
-      "password": "26f8b77f-fc9f-4a26-ab3f-e26a025389e9",
-      "phoneNumber": "+1 (852) 510-3448",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "shi tzu",
-        "ageMin": 16,
-        "ageMax": 5
-      }
-    },
-    {
-      "dogName": "Knapp",
-      "email": "knapp@knappmail",
-      "password": "204a5588-b2f5-4049-b4f1-601627a2b57a",
-      "phoneNumber": "+1 (870) 482-3040",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 5,
-        "ageMax": 15
-      }
-    },
-    {
-      "dogName": "Phoebe",
-      "email": "phoebe@phoebemail",
-      "password": "8b21774d-70b3-42bd-ac5e-66bd5343abe7",
-      "phoneNumber": "+1 (969) 494-2475",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 15,
-        "ageMax": 15
-      }
-    },
-    {
-      "dogName": "Savannah",
-      "email": "savannah@savannahmail",
-      "password": "535c9e4b-4c97-48bd-88de-670e3bde59cc",
-      "phoneNumber": "+1 (959) 579-3887",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 7,
-        "ageMax": 2
-      }
-    },
-    {
-      "dogName": "Deena",
-      "email": "deena@deenamail",
-      "password": "1973b47a-0a76-4120-a884-43053482bca1",
-      "phoneNumber": "+1 (802) 472-3803",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 19,
-        "ageMax": 17
-      }
-    },
-    {
-      "dogName": "Morrison",
-      "email": "morrison@morrisonmail",
-      "password": "2c647f96-270b-484e-ac80-61e5e1ae7d96",
-      "phoneNumber": "+1 (853) 545-3478",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 11,
-        "ageMax": 19
-      }
-    },
-    {
-      "dogName": "Larsen",
-      "email": "larsen@larsenmail",
-      "password": "31af7dc6-32e3-4f89-942b-c1d8673ec8bb",
-      "phoneNumber": "+1 (837) 417-2074",
-      "breed": "shi tzu",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 10,
-        "ageMax": 18
-      }
-    },
-    {
-      "dogName": "Reva",
-      "email": "reva@revamail",
-      "password": "735a8551-f6bc-49e3-a01d-24aac06bcc5e",
-      "phoneNumber": "+1 (898) 596-2930",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 8,
-        "ageMax": 9
-      }
-    },
-    {
-      "dogName": "Laverne",
-      "email": "laverne@lavernemail",
-      "password": "6694e2a2-34d1-4471-8628-1b24b0939580",
-      "phoneNumber": "+1 (914) 578-3630",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Friendly",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 9,
-        "ageMax": 4
-      }
-    },
-    {
-      "dogName": "Thelma",
-      "email": "thelma@thelmamail",
-      "password": "aba7b9bc-658b-4d3f-9e2a-a1bae8cc467f",
-      "phoneNumber": "+1 (931) 522-3261",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Shy",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "mix",
-        "ageMin": 15,
-        "ageMax": 2
-      }
-    },
-    {
-      "dogName": "Tracey",
-      "email": "tracey@traceymail",
-      "password": "9cf3ef1b-2620-427b-b456-4a4a769c9f1c",
-      "phoneNumber": "+1 (870) 494-3500",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "bulldog",
-        "ageMin": 1,
-        "ageMax": 12
-      }
-    },
-    {
-      "dogName": "Ashley",
-      "email": "ashley@ashleymail",
-      "password": "2c5b5809-6fba-4d3b-8dfe-40d5401457bb",
-      "phoneNumber": "+1 (828) 543-3997",
-      "breed": "bulldog",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 2,
-        "ageMax": 15
-      }
-    },
-    {
-      "dogName": "Charles",
-      "email": "charles@charlesmail",
-      "password": "bf91d4fa-d110-4e76-a19e-d233da43eda8",
-      "phoneNumber": "+1 (915) 557-2104",
-      "breed": "mix",
-      "image": "http://placehold.it/32x32",
-      "activity": "Very Sociable",
-      "interactions": [],
-      "searchPreferences": {
-        "breed": "everything",
-        "ageMin": 5,
-        "ageMax": 4
-      }
+  {
+    "dogName": "Fuller",
+    "email": "fuller@fullermail.com",
+    "password": "51bb7958-2192-4e2b-8368-3f3760b27b4b",
+    "age": 9,
+    "phoneNumber": "(905) 567-3872",
+    "breed": "springer",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "otterhound",
+      "ageMin": 6,
+      "ageMax": 12
     }
-  ]
-
-  module.exports = dogs;
+  },
+  {
+    "dogName": "Clay",
+    "email": "clay@claymail.com",
+    "password": "f80fb75b-6fba-4bd0-9114-659145e85c16",
+    "age": 18,
+    "phoneNumber": "(870) 411-3479",
+    "breed": "ridgeback",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "keeshond",
+      "ageMin": 6,
+      "ageMax": 6
+    }
+  },
+  {
+    "dogName": "Martin",
+    "email": "martin@martinmail.com",
+    "password": "b83a3304-783c-4996-823e-95dadbef0800",
+    "age": 17,
+    "phoneNumber": "(892) 566-2340",
+    "breed": "basenji",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "chihuahua",
+      "ageMin": 19,
+      "ageMax": 16
+    }
+  },
+  {
+    "dogName": "Park",
+    "email": "park@parkmail.com",
+    "password": "521a354f-6beb-42b8-9f50-570ee49e12ee",
+    "age": 12,
+    "phoneNumber": "(849) 484-3212",
+    "breed": "cattledog",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "schnauzer",
+      "ageMin": 12,
+      "ageMax": 2
+    }
+  },
+  {
+    "dogName": "Camacho",
+    "email": "camacho@camachomail.com",
+    "password": "2540b9ac-b45f-4744-94f5-ecb22c7d71f0",
+    "age": 5,
+    "phoneNumber": "(854) 484-2888",
+    "breed": "otterhound",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "greyhound",
+      "ageMin": 10,
+      "ageMax": 10
+    }
+  },
+  {
+    "dogName": "Bridgette",
+    "email": "bridgette@bridgettemail.com",
+    "password": "e53033e1-8435-46fa-a96e-9229572c6573",
+    "age": 18,
+    "phoneNumber": "(911) 554-3753",
+    "breed": "vizsla",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "basenji",
+      "ageMin": 3,
+      "ageMax": 7
+    }
+  },
+  {
+    "dogName": "Vinson",
+    "email": "vinson@vinsonmail.com",
+    "password": "7d864c7f-e175-422b-8e71-cbbe1c311c35",
+    "age": 10,
+    "phoneNumber": "(992) 433-3368",
+    "breed": "dalmatian",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "bichon-frise",
+      "ageMin": 14,
+      "ageMax": 20
+    }
+  },
+  {
+    "dogName": "Earnestine",
+    "email": "earnestine@earnestinemail.com",
+    "password": "f2ee7076-764e-4a49-8de9-14714a7b95bb",
+    "age": 20,
+    "phoneNumber": "(817) 444-2014",
+    "breed": "spaniel",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "bluetick",
+      "ageMin": 3,
+      "ageMax": 12
+    }
+  },
+  {
+    "dogName": "Jessie",
+    "email": "jessie@jessiemail.com",
+    "password": "8c4d4fbe-b59e-49d4-b292-eb7109800471",
+    "age": 20,
+    "phoneNumber": "(834) 423-3855",
+    "breed": "whippet",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "hound",
+      "ageMin": 10,
+      "ageMax": 1
+    }
+  },
+  {
+    "dogName": "Lavonne",
+    "email": "lavonne@lavonnemail.com",
+    "password": "dee750ba-15ce-4cbc-85c3-4e06f91d8da0",
+    "age": 9,
+    "phoneNumber": "(873) 445-2619",
+    "breed": "pomeranian",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pomeranian",
+      "ageMin": 17,
+      "ageMax": 2
+    }
+  },
+  {
+    "dogName": "Francesca",
+    "email": "francesca@francescamail.com",
+    "password": "9a55693b-16b4-4dae-8e09-a0e5588cbe60",
+    "age": 4,
+    "phoneNumber": "(888) 482-3642",
+    "breed": "havanese",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "malinois",
+      "ageMin": 13,
+      "ageMax": 2
+    }
+  },
+  {
+    "dogName": "Inez",
+    "email": "inez@inezmail.com",
+    "password": "f5d8edd6-87d7-40d6-948a-b122ee12c652",
+    "age": 17,
+    "phoneNumber": "(937) 416-2521",
+    "breed": "shiba",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "briard",
+      "ageMin": 18,
+      "ageMax": 7
+    }
+  },
+  {
+    "dogName": "Celia",
+    "email": "celia@celiamail.com",
+    "password": "0c2a27d2-6a73-4a1d-b858-6b2ba5792788",
+    "age": 17,
+    "phoneNumber": "(996) 546-3186",
+    "breed": "wolfhound",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "everything",
+      "ageMin": 3,
+      "ageMax": 16
+    }
+  },
+  {
+    "dogName": "Horton",
+    "email": "horton@hortonmail.com",
+    "password": "1d720217-0d97-420a-b082-5bd463e49b6a",
+    "age": 12,
+    "phoneNumber": "(905) 407-3158",
+    "breed": "labrador",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "dingo",
+      "ageMin": 7,
+      "ageMax": 10
+    }
+  },
+  {
+    "dogName": "Patel",
+    "email": "patel@patelmail.com",
+    "password": "bbd26a4b-d49d-41b5-8189-0abb11fd768d",
+    "age": 18,
+    "phoneNumber": "(825) 489-2584",
+    "breed": "doberman",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "great-dane",
+      "ageMin": 3,
+      "ageMax": 4
+    }
+  },
+  {
+    "dogName": "Mcdaniel",
+    "email": "mcdaniel@mcdanielmail.com",
+    "password": "6c6bbc6f-7f36-4b54-a049-a067ef48852d",
+    "age": 7,
+    "phoneNumber": "(833) 453-3941",
+    "breed": "norwegian-buhund",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "entlebucher",
+      "ageMin": 13,
+      "ageMax": 13
+    }
+  },
+  {
+    "dogName": "Shelby",
+    "email": "shelby@shelbymail.com",
+    "password": "173fd3e6-6ddd-42be-9e43-643c0be80a5f",
+    "age": 3,
+    "phoneNumber": "(912) 453-2923",
+    "breed": "stbernard",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "rottweiler",
+      "ageMin": 12,
+      "ageMax": 3
+    }
+  },
+  {
+    "dogName": "Bessie",
+    "email": "bessie@bessiemail.com",
+    "password": "d2137352-7157-409b-9b5e-1974c010676a",
+    "age": 4,
+    "phoneNumber": "(904) 514-3615",
+    "breed": "weimaraner",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "schipperke",
+      "ageMin": 14,
+      "ageMax": 1
+    }
+  },
+  {
+    "dogName": "Lucinda",
+    "email": "lucinda@lucindamail.com",
+    "password": "a1903a32-6256-4f57-953e-eecf0a601c47",
+    "age": 17,
+    "phoneNumber": "(973) 421-3145",
+    "breed": "spaniel",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "shihtzu",
+      "ageMin": 14,
+      "ageMax": 20
+    }
+  },
+  {
+    "dogName": "Ava",
+    "email": "ava@avamail.com",
+    "password": "89c4524f-2407-4fe6-aac8-0d6b442fffbc",
+    "age": 11,
+    "phoneNumber": "(902) 417-3718",
+    "breed": "dachshund",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "bulldog",
+      "ageMin": 0,
+      "ageMax": 17
+    }
+  },
+  {
+    "dogName": "Sarah",
+    "email": "sarah@sarahmail.com",
+    "password": "e79de39d-986c-4118-987b-d7251f1c3388",
+    "age": 16,
+    "phoneNumber": "(994) 566-2234",
+    "breed": "cockapoo",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "samoyed",
+      "ageMin": 18,
+      "ageMax": 1
+    }
+  },
+  {
+    "dogName": "Vazquez",
+    "email": "vazquez@vazquezmail.com",
+    "password": "0a2a58c3-0f40-4def-8caa-f779ab7e910b",
+    "age": 2,
+    "phoneNumber": "(966) 450-3999",
+    "breed": "germanshepherd",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "hound",
+      "ageMin": 3,
+      "ageMax": 5
+    }
+  },
+  {
+    "dogName": "Francine",
+    "email": "francine@francinemail.com",
+    "password": "d3c9604b-0abe-4020-85ae-149b77959843",
+    "age": 20,
+    "phoneNumber": "(862) 492-3038",
+    "breed": "shiba",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "everything",
+      "ageMin": 15,
+      "ageMax": 18
+    }
+  },
+  {
+    "dogName": "Mckenzie",
+    "email": "mckenzie@mckenziemail.com",
+    "password": "ec533fd6-83b1-4b5d-ac0e-a1ebaad8c847",
+    "age": 0,
+    "phoneNumber": "(800) 401-2947",
+    "breed": "affenpinscher",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "basenji",
+      "ageMin": 3,
+      "ageMax": 10
+    }
+  },
+  {
+    "dogName": "May",
+    "email": "may@maymail.com",
+    "password": "d07ebe45-b44f-4853-bb0f-74a7623c84a8",
+    "age": 20,
+    "phoneNumber": "(888) 415-3488",
+    "breed": "stbernard",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "stbernard",
+      "ageMin": 12,
+      "ageMax": 9
+    }
+  },
+  {
+    "dogName": "Louise",
+    "email": "louise@louisemail.com",
+    "password": "c02bb1f7-20f3-4bea-91c5-32e377bb866f",
+    "age": 4,
+    "phoneNumber": "(915) 503-2272",
+    "breed": "akita",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "hound",
+      "ageMin": 14,
+      "ageMax": 8
+    }
+  },
+  {
+    "dogName": "Ladonna",
+    "email": "ladonna@ladonnamail.com",
+    "password": "1a5d8ea4-bb5d-4f3a-a2d6-4cdb0f6ae6cd",
+    "age": 8,
+    "phoneNumber": "(905) 549-2084",
+    "breed": "cotondetulear",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "schnauzer",
+      "ageMin": 11,
+      "ageMax": 19
+    }
+  },
+  {
+    "dogName": "Miranda",
+    "email": "miranda@mirandamail.com",
+    "password": "106c8c72-11ab-40eb-8290-27a3a4ab056a",
+    "age": 19,
+    "phoneNumber": "(899) 483-2006",
+    "breed": "basenji",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "dachshund",
+      "ageMin": 18,
+      "ageMax": 12
+    }
+  },
+  {
+    "dogName": "Lee",
+    "email": "lee@leemail.com",
+    "password": "18d3954d-e849-48bb-8300-bd1efc847b20",
+    "age": 1,
+    "phoneNumber": "(921) 546-3414",
+    "breed": "affenpinscher",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "bernese-mountain",
+      "ageMin": 8,
+      "ageMax": 16
+    }
+  },
+  {
+    "dogName": "Christina",
+    "email": "christina@christinamail.com",
+    "password": "265b872b-4fa9-4dcd-8485-79a3e0589c0f",
+    "age": 15,
+    "phoneNumber": "(978) 575-2000",
+    "breed": "norwegian-buhund",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "schipperke",
+      "ageMin": 19,
+      "ageMax": 6
+    }
+  },
+  {
+    "dogName": "Katy",
+    "email": "katy@katymail.com",
+    "password": "2f4194db-7115-468c-ab63-224102ac4d08",
+    "age": 19,
+    "phoneNumber": "(959) 533-2341",
+    "breed": "dalmatian",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "eskimo",
+      "ageMin": 17,
+      "ageMax": 18
+    }
+  },
+  {
+    "dogName": "Mae",
+    "email": "mae@maemail.com",
+    "password": "90efaf64-c53a-4472-98df-3c6a6da476a9",
+    "age": 19,
+    "phoneNumber": "(992) 535-3280",
+    "breed": "hound",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pug",
+      "ageMin": 14,
+      "ageMax": 6
+    }
+  },
+  {
+    "dogName": "Mercado",
+    "email": "mercado@mercadomail.com",
+    "password": "56b8be4b-4e29-40df-817a-6861bebbaa68",
+    "age": 8,
+    "phoneNumber": "(925) 465-3789",
+    "breed": "keeshond",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "terrier",
+      "ageMin": 17,
+      "ageMax": 18
+    }
+  },
+  {
+    "dogName": "Oneal",
+    "email": "oneal@onealmail.com",
+    "password": "43067190-3652-4d0b-91b9-7063a4247d6a",
+    "age": 13,
+    "phoneNumber": "(982) 417-3005",
+    "breed": "setter",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "coonhound",
+      "ageMin": 11,
+      "ageMax": 2
+    }
+  },
+  {
+    "dogName": "Combs",
+    "email": "combs@combsmail.com",
+    "password": "dc6a9f6e-5432-4135-8e61-7d6e7a55f159",
+    "age": 4,
+    "phoneNumber": "(812) 508-2650",
+    "breed": "kelpie",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "bulldog",
+      "ageMin": 5,
+      "ageMax": 4
+    }
+  },
+  {
+    "dogName": "Mccray",
+    "email": "mccray@mccraymail.com",
+    "password": "b0f56e85-0a14-40ca-937e-2ca9b7d9b9b9",
+    "age": 6,
+    "phoneNumber": "(909) 460-2604",
+    "breed": "puggle",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "komondor",
+      "ageMin": 10,
+      "ageMax": 2
+    }
+  },
+  {
+    "dogName": "Dickerson",
+    "email": "dickerson@dickersonmail.com",
+    "password": "6ba5cb33-a935-479e-b920-c90561d34d8b",
+    "age": 10,
+    "phoneNumber": "(852) 437-2499",
+    "breed": "mastiff",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "stbernard",
+      "ageMin": 0,
+      "ageMax": 8
+    }
+  },
+  {
+    "dogName": "Armstrong",
+    "email": "armstrong@armstrongmail.com",
+    "password": "a5e04e00-233f-46d9-b443-22ff53eab7d2",
+    "age": 11,
+    "phoneNumber": "(940) 500-2560",
+    "breed": "malinois",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pekinese",
+      "ageMin": 8,
+      "ageMax": 10
+    }
+  },
+  {
+    "dogName": "Mcbride",
+    "email": "mcbride@mcbridemail.com",
+    "password": "cb987aa0-09e4-4283-9404-425be238573f",
+    "age": 0,
+    "phoneNumber": "(927) 598-2163",
+    "breed": "borzoi",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "doberman",
+      "ageMin": 10,
+      "ageMax": 18
+    }
+  },
+  {
+    "dogName": "Flossie",
+    "email": "flossie@flossiemail.com",
+    "password": "5008599f-7962-4e82-b6ab-0ed34570324f",
+    "age": 13,
+    "phoneNumber": "(825) 563-3789",
+    "breed": "greyhound",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "beagle",
+      "ageMin": 16,
+      "ageMax": 8
+    }
+  },
+  {
+    "dogName": "Valentine",
+    "email": "valentine@valentinemail.com",
+    "password": "47bb3d22-c8a8-4571-90d9-f12180d2a5eb",
+    "age": 0,
+    "phoneNumber": "(875) 483-3630",
+    "breed": "pug",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "komondor",
+      "ageMin": 16,
+      "ageMax": 3
+    }
+  },
+  {
+    "dogName": "Hartman",
+    "email": "hartman@hartmanmail.com",
+    "password": "17f38637-6b97-432d-97ef-5321e8ab96b3",
+    "age": 4,
+    "phoneNumber": "(951) 595-3002",
+    "breed": "dhole",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "doberman",
+      "ageMin": 3,
+      "ageMax": 14
+    }
+  },
+  {
+    "dogName": "Gamble",
+    "email": "gamble@gamblemail.com",
+    "password": "2ac24f09-ba39-463c-8b99-39fc1d6176b1",
+    "age": 6,
+    "phoneNumber": "(857) 432-2487",
+    "breed": "pitbull",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "dhole",
+      "ageMin": 19,
+      "ageMax": 11
+    }
+  },
+  {
+    "dogName": "Peggy",
+    "email": "peggy@peggymail.com",
+    "password": "038f5c26-17a9-4050-9d94-888aaa3e97fe",
+    "age": 0,
+    "phoneNumber": "(855) 518-3949",
+    "breed": "bichon-frise",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pyrenees",
+      "ageMin": 0,
+      "ageMax": 19
+    }
+  },
+  {
+    "dogName": "Sharpe",
+    "email": "sharpe@sharpemail.com",
+    "password": "742a4686-8c8e-4d52-b5f5-e76f39325a20",
+    "age": 20,
+    "phoneNumber": "(993) 493-3126",
+    "breed": "otterhound",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "retriever",
+      "ageMin": 12,
+      "ageMax": 15
+    }
+  },
+  {
+    "dogName": "Kitty",
+    "email": "kitty@kittymail.com",
+    "password": "54e0942f-1aff-4501-bdbe-56e433a03ccc",
+    "age": 7,
+    "phoneNumber": "(838) 590-3995",
+    "breed": "collie",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "dingo",
+      "ageMin": 12,
+      "ageMax": 15
+    }
+  },
+  {
+    "dogName": "Lora",
+    "email": "lora@loramail.com",
+    "password": "7a9fee9d-96e9-412e-b5fc-b0a8a64c91e1",
+    "age": 18,
+    "phoneNumber": "(865) 508-2580",
+    "breed": "beagle",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "lhasa",
+      "ageMin": 14,
+      "ageMax": 20
+    }
+  },
+  {
+    "dogName": "Roberson",
+    "email": "roberson@robersonmail.com",
+    "password": "6950f1b7-d565-41e4-9e12-7455073c84f2",
+    "age": 8,
+    "phoneNumber": "(837) 445-2053",
+    "breed": "australian-shepherd",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pomeranian",
+      "ageMin": 10,
+      "ageMax": 18
+    }
+  },
+  {
+    "dogName": "Julia",
+    "email": "julia@juliamail.com",
+    "password": "95504082-f924-4139-a30f-60b924141bbf",
+    "age": 9,
+    "phoneNumber": "(984) 453-3334",
+    "breed": "terrier",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "basenji",
+      "ageMin": 13,
+      "ageMax": 1
+    }
+  },
+  {
+    "dogName": "Baker",
+    "email": "baker@bakermail.com",
+    "password": "c1fe3a52-c8bb-4fe5-96e8-6f35182b96d7",
+    "age": 6,
+    "phoneNumber": "(933) 566-2179",
+    "breed": "swiss-mountain",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "malamute",
+      "ageMin": 2,
+      "ageMax": 13
+    }
+  },
+  {
+    "dogName": "Pearl",
+    "email": "pearl@pearlmail.com",
+    "password": "f5d8ebac-1716-48db-8cdb-0d4fc43853ea",
+    "age": 11,
+    "phoneNumber": "(939) 583-2312",
+    "breed": "coonhound",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pekinese",
+      "ageMin": 19,
+      "ageMax": 11
+    }
+  },
+  {
+    "dogName": "Dillard",
+    "email": "dillard@dillardmail.com",
+    "password": "49ac4038-de9c-44fb-832e-4931cfd15c75",
+    "age": 18,
+    "phoneNumber": "(946) 434-2530",
+    "breed": "bullterrier",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "havanese",
+      "ageMin": 13,
+      "ageMax": 19
+    }
+  },
+  {
+    "dogName": "Mamie",
+    "email": "mamie@mamiemail.com",
+    "password": "d12bd0db-4d4e-4aec-8289-cb4b16ac54d8",
+    "age": 4,
+    "phoneNumber": "(810) 459-2712",
+    "breed": "papillon",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "dalmatian",
+      "ageMin": 1,
+      "ageMax": 10
+    }
+  },
+  {
+    "dogName": "Battle",
+    "email": "battle@battlemail.com",
+    "password": "e807e8c3-139a-4448-a31c-392ea361f358",
+    "age": 17,
+    "phoneNumber": "(958) 441-3003",
+    "breed": "swiss-mountain",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "basenji",
+      "ageMin": 9,
+      "ageMax": 5
+    }
+  },
+  {
+    "dogName": "Lindsey",
+    "email": "lindsey@lindseymail.com",
+    "password": "6bacd0b9-0436-42fa-98a7-11f8591fae0c",
+    "age": 20,
+    "phoneNumber": "(981) 558-2175",
+    "breed": "retriever",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "chow",
+      "ageMin": 19,
+      "ageMax": 14
+    }
+  },
+  {
+    "dogName": "Duffy",
+    "email": "duffy@duffymail.com",
+    "password": "cb0480a0-728d-4723-8b13-fc1b15459d6f",
+    "age": 12,
+    "phoneNumber": "(888) 482-2678",
+    "breed": "briard",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "sheepdog",
+      "ageMin": 1,
+      "ageMax": 17
+    }
+  },
+  {
+    "dogName": "Irene",
+    "email": "irene@irenemail.com",
+    "password": "94dc9563-61a6-4223-9ad6-5ba7eda39d58",
+    "age": 7,
+    "phoneNumber": "(941) 575-2758",
+    "breed": "puggle",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "mix",
+      "ageMin": 11,
+      "ageMax": 13
+    }
+  },
+  {
+    "dogName": "Virginia",
+    "email": "virginia@virginiamail.com",
+    "password": "3307333c-c880-4c9c-a330-9f32405e5918",
+    "age": 8,
+    "phoneNumber": "(818) 465-2809",
+    "breed": "coonhound",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "entlebucher",
+      "ageMin": 2,
+      "ageMax": 19
+    }
+  },
+  {
+    "dogName": "Lang",
+    "email": "lang@langmail.com",
+    "password": "d50c484e-16be-4504-85f3-8cbfc1601c90",
+    "age": 5,
+    "phoneNumber": "(872) 588-2067",
+    "breed": "newfoundland",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pembroke",
+      "ageMin": 3,
+      "ageMax": 2
+    }
+  },
+  {
+    "dogName": "Albert",
+    "email": "albert@albertmail.com",
+    "password": "d10d7da3-a814-4739-877b-6cdec206fdf6",
+    "age": 3,
+    "phoneNumber": "(886) 498-3992",
+    "breed": "kelpie",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "affenpinscher",
+      "ageMin": 7,
+      "ageMax": 17
+    }
+  },
+  {
+    "dogName": "Vincent",
+    "email": "vincent@vincentmail.com",
+    "password": "16de966c-d189-45eb-a18e-b383a1563597",
+    "age": 20,
+    "phoneNumber": "(954) 592-2290",
+    "breed": "schipperke",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pembroke",
+      "ageMin": 5,
+      "ageMax": 1
+    }
+  },
+  {
+    "dogName": "Schneider",
+    "email": "schneider@schneidermail.com",
+    "password": "37909925-e5f3-42e8-8bef-46618fed6e18",
+    "age": 6,
+    "phoneNumber": "(846) 546-3106",
+    "breed": "coonhound",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "collie",
+      "ageMin": 4,
+      "ageMax": 3
+    }
+  },
+  {
+    "dogName": "Ellison",
+    "email": "ellison@ellisonmail.com",
+    "password": "34b58c8b-947d-4791-93b7-03b46d991faf",
+    "age": 7,
+    "phoneNumber": "(989) 514-3283",
+    "breed": "retriever",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "wolfhound",
+      "ageMin": 17,
+      "ageMax": 7
+    }
+  },
+  {
+    "dogName": "Valerie",
+    "email": "valerie@valeriemail.com",
+    "password": "e85f218b-1d9e-4fec-8161-41b986bbecca",
+    "age": 10,
+    "phoneNumber": "(834) 549-3841",
+    "breed": "rottweiler",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "waterdog",
+      "ageMin": 17,
+      "ageMax": 1
+    }
+  },
+  {
+    "dogName": "Cleveland",
+    "email": "cleveland@clevelandmail.com",
+    "password": "c7532b0a-0144-4660-8e40-1856e72ae606",
+    "age": 6,
+    "phoneNumber": "(903) 557-3227",
+    "breed": "eskimo",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "chow",
+      "ageMin": 3,
+      "ageMax": 11
+    }
+  },
+  {
+    "dogName": "Barbra",
+    "email": "barbra@barbramail.com",
+    "password": "804c9014-fb5b-4b47-b107-89349273d516",
+    "age": 10,
+    "phoneNumber": "(940) 576-2977",
+    "breed": "vizsla",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "swiss-mountain",
+      "ageMin": 0,
+      "ageMax": 8
+    }
+  },
+  {
+    "dogName": "Laura",
+    "email": "laura@lauramail.com",
+    "password": "c4b5126c-fb7f-40ec-8cb9-e85e0d596f63",
+    "age": 9,
+    "phoneNumber": "(995) 542-3197",
+    "breed": "akita",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "wolfhound",
+      "ageMin": 15,
+      "ageMax": 15
+    }
+  },
+  {
+    "dogName": "Roxie",
+    "email": "roxie@roxiemail.com",
+    "password": "4851a960-d27b-46e6-a618-a43f51ddd1cc",
+    "age": 14,
+    "phoneNumber": "(982) 470-2035",
+    "breed": "briard",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "norwegian-elkhound",
+      "ageMin": 14,
+      "ageMax": 12
+    }
+  },
+  {
+    "dogName": "Noble",
+    "email": "noble@noblemail.com",
+    "password": "3bd65547-1bc4-49be-88ec-b481aa454e05",
+    "age": 2,
+    "phoneNumber": "(924) 498-2433",
+    "breed": "norwegian-buhund",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "schipperke",
+      "ageMin": 14,
+      "ageMax": 2
+    }
+  },
+  {
+    "dogName": "Golden",
+    "email": "golden@goldenmail.com",
+    "password": "ca15a695-f889-4fc5-b43a-2ca9fc329478",
+    "age": 19,
+    "phoneNumber": "(954) 508-3703",
+    "breed": "affenpinscher",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "samoyed",
+      "ageMin": 5,
+      "ageMax": 12
+    }
+  },
+  {
+    "dogName": "Lydia",
+    "email": "lydia@lydiamail.com",
+    "password": "927ed496-866a-45f5-b240-ad1df20c8a80",
+    "age": 1,
+    "phoneNumber": "(958) 591-2734",
+    "breed": "pyrenees",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "borzoi",
+      "ageMin": 15,
+      "ageMax": 20
+    }
+  },
+  {
+    "dogName": "Esther",
+    "email": "esther@esthermail.com",
+    "password": "2d77bd32-9603-4ec7-b205-a9ca796b76e7",
+    "age": 1,
+    "phoneNumber": "(933) 531-3712",
+    "breed": "kuvasz",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "keeshond",
+      "ageMin": 0,
+      "ageMax": 2
+    }
+  },
+  {
+    "dogName": "Stein",
+    "email": "stein@steinmail.com",
+    "password": "a8e40cb6-ba58-40ff-ae79-f34d0811b2d3",
+    "age": 4,
+    "phoneNumber": "(933) 585-3356",
+    "breed": "entlebucher",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "rottweiler",
+      "ageMin": 13,
+      "ageMax": 20
+    }
+  },
+  {
+    "dogName": "Alicia",
+    "email": "alicia@aliciamail.com",
+    "password": "6eebd70b-54b9-4fa1-b297-9af686ad91e9",
+    "age": 12,
+    "phoneNumber": "(889) 532-2476",
+    "breed": "bichon-frise",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "bluetick",
+      "ageMin": 8,
+      "ageMax": 19
+    }
+  },
+  {
+    "dogName": "Sandy",
+    "email": "sandy@sandymail.com",
+    "password": "bfea28a5-a3d7-4a02-9344-30dc6c95a2b7",
+    "age": 19,
+    "phoneNumber": "(800) 420-3564",
+    "breed": "chihuahua",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "schipperke",
+      "ageMin": 17,
+      "ageMax": 4
+    }
+  },
+  {
+    "dogName": "Deirdre",
+    "email": "deirdre@deirdremail.com",
+    "password": "efdc1546-701b-4856-8138-759d5f3e3036",
+    "age": 18,
+    "phoneNumber": "(912) 464-3584",
+    "breed": "havanese",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "briard",
+      "ageMin": 19,
+      "ageMax": 20
+    }
+  },
+  {
+    "dogName": "Krystal",
+    "email": "krystal@krystalmail.com",
+    "password": "361f9bf9-12c8-4c5e-bfff-e2640389ee69",
+    "age": 8,
+    "phoneNumber": "(946) 544-3741",
+    "breed": "germanshepherd",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "affenpinscher",
+      "ageMin": 10,
+      "ageMax": 10
+    }
+  },
+  {
+    "dogName": "Lizzie",
+    "email": "lizzie@lizziemail.com",
+    "password": "4a463660-0e42-48f9-a59c-c4e0c5baf758",
+    "age": 0,
+    "phoneNumber": "(884) 579-2936",
+    "breed": "beagle",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "basenji",
+      "ageMin": 3,
+      "ageMax": 17
+    }
+  },
+  {
+    "dogName": "Mooney",
+    "email": "mooney@mooneymail.com",
+    "password": "59155bc8-19c0-4854-96cc-4a393e8e9f7c",
+    "age": 16,
+    "phoneNumber": "(839) 570-2211",
+    "breed": "dalmatian",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "briard",
+      "ageMin": 15,
+      "ageMax": 9
+    }
+  },
+  {
+    "dogName": "Ruiz",
+    "email": "ruiz@ruizmail.com",
+    "password": "5e62b525-8669-4af3-ae51-521170de5c02",
+    "age": 20,
+    "phoneNumber": "(812) 507-2246",
+    "breed": "beagle",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "ridgeback",
+      "ageMin": 14,
+      "ageMax": 13
+    }
+  },
+  {
+    "dogName": "Augusta",
+    "email": "augusta@augustamail.com",
+    "password": "01d75a57-bb0b-4c71-a656-6adea1e5ad27",
+    "age": 5,
+    "phoneNumber": "(982) 499-2983",
+    "breed": "mix",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "leonberg",
+      "ageMin": 1,
+      "ageMax": 14
+    }
+  },
+  {
+    "dogName": "Romero",
+    "email": "romero@romeromail.com",
+    "password": "3738b167-0860-4055-9712-d13326068905",
+    "age": 17,
+    "phoneNumber": "(898) 543-3692",
+    "breed": "lhasa",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "greyhound",
+      "ageMin": 2,
+      "ageMax": 12
+    }
+  },
+  {
+    "dogName": "Rhonda",
+    "email": "rhonda@rhondamail.com",
+    "password": "5262fc1a-6e93-4f63-a2d3-07de08f29782",
+    "age": 12,
+    "phoneNumber": "(949) 490-2146",
+    "breed": "bichon-frise",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "weimaraner",
+      "ageMin": 14,
+      "ageMax": 13
+    }
+  },
+  {
+    "dogName": "Cannon",
+    "email": "cannon@cannonmail.com",
+    "password": "11f224d6-4e04-460d-8d27-12b53e13edc8",
+    "age": 1,
+    "phoneNumber": "(849) 536-2138",
+    "breed": "stbernard",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "puggle",
+      "ageMin": 15,
+      "ageMax": 13
+    }
+  },
+  {
+    "dogName": "Gertrude",
+    "email": "gertrude@gertrudemail.com",
+    "password": "9a4af6d1-8483-45c6-ad02-4d8512f74813",
+    "age": 3,
+    "phoneNumber": "(863) 551-2846",
+    "breed": "doberman",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pekinese",
+      "ageMin": 11,
+      "ageMax": 7
+    }
+  },
+  {
+    "dogName": "Moon",
+    "email": "moon@moonmail.com",
+    "password": "b0bc03fe-9ced-4ff4-b818-b9920d224634",
+    "age": 0,
+    "phoneNumber": "(828) 414-3425",
+    "breed": "mix",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "cockapoo",
+      "ageMin": 8,
+      "ageMax": 20
+    }
+  },
+  {
+    "dogName": "Snyder",
+    "email": "snyder@snydermail.com",
+    "password": "e4d87c23-844d-41fd-8fcd-0bf81488065e",
+    "age": 10,
+    "phoneNumber": "(811) 406-2870",
+    "breed": "groenendael",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "newfoundland",
+      "ageMin": 12,
+      "ageMax": 19
+    }
+  },
+  {
+    "dogName": "Tabitha",
+    "email": "tabitha@tabithamail.com",
+    "password": "673f5a0d-e454-4602-8257-b1c9a6147ad9",
+    "age": 14,
+    "phoneNumber": "(968) 554-2507",
+    "breed": "schipperke",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "cockapoo",
+      "ageMin": 0,
+      "ageMax": 20
+    }
+  },
+  {
+    "dogName": "Randall",
+    "email": "randall@randallmail.com",
+    "password": "af49df0a-dd53-432f-8d31-f0596ecc642f",
+    "age": 16,
+    "phoneNumber": "(898) 487-2878",
+    "breed": "eskimo",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "setter",
+      "ageMin": 0,
+      "ageMax": 13
+    }
+  },
+  {
+    "dogName": "Meadows",
+    "email": "meadows@meadowsmail.com",
+    "password": "0c91da38-55f9-47c0-83b7-d7e0a8738dc7",
+    "age": 7,
+    "phoneNumber": "(808) 512-2226",
+    "breed": "entlebucher",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "mexicanhairless",
+      "ageMin": 10,
+      "ageMax": 17
+    }
+  },
+  {
+    "dogName": "Cheri",
+    "email": "cheri@cherimail.com",
+    "password": "25b6c01f-ab5c-4ea0-a63e-98f5aca48cd0",
+    "age": 7,
+    "phoneNumber": "(949) 595-3015",
+    "breed": "pekinese",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "labrador",
+      "ageMin": 6,
+      "ageMax": 4
+    }
+  },
+  {
+    "dogName": "Keri",
+    "email": "keri@kerimail.com",
+    "password": "530423a6-c65c-4523-bbf7-163cf085f52e",
+    "age": 18,
+    "phoneNumber": "(921) 562-3845",
+    "breed": "dhole",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "bernese-mountain",
+      "ageMin": 10,
+      "ageMax": 17
+    }
+  },
+  {
+    "dogName": "Graham",
+    "email": "graham@grahammail.com",
+    "password": "4367f0fe-d793-4487-a948-dc9808623cd7",
+    "age": 9,
+    "phoneNumber": "(903) 589-2175",
+    "breed": "pembroke",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "groenendael",
+      "ageMin": 2,
+      "ageMax": 4
+    }
+  },
+  {
+    "dogName": "Christie",
+    "email": "christie@christiemail.com",
+    "password": "dd1f3cfb-8fd8-4ce4-9900-84c2b0c2f498",
+    "age": 18,
+    "phoneNumber": "(830) 480-2415",
+    "breed": "brabancon",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "basenji",
+      "ageMin": 13,
+      "ageMax": 7
+    }
+  },
+  {
+    "dogName": "Ann",
+    "email": "ann@annmail.com",
+    "password": "7e930a16-c898-4c98-8027-863baf425b5c",
+    "age": 7,
+    "phoneNumber": "(991) 489-2953",
+    "breed": "cairn",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "bouvier",
+      "ageMin": 1,
+      "ageMax": 17
+    }
+  },
+  {
+    "dogName": "Lara",
+    "email": "lara@laramail.com",
+    "password": "a092574b-3e26-4752-af53-097bb22e44eb",
+    "age": 6,
+    "phoneNumber": "(824) 546-2028",
+    "breed": "terrier",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pekinese",
+      "ageMin": 19,
+      "ageMax": 5
+    }
+  },
+  {
+    "dogName": "Young",
+    "email": "young@youngmail.com",
+    "password": "2a3f980f-7119-4e94-b7cc-492b0cb56f51",
+    "age": 5,
+    "phoneNumber": "(868) 439-2667",
+    "breed": "swiss-mountain",
+    "image": "http://placehold.it/32x32",
+    "activity": "Very Sociable",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "whippet",
+      "ageMin": 4,
+      "ageMax": 13
+    }
+  },
+  {
+    "dogName": "Annie",
+    "email": "annie@anniemail.com",
+    "password": "0c8f7b7b-221c-4c97-bc34-94e4e25580ca",
+    "age": 2,
+    "phoneNumber": "(813) 418-2187",
+    "breed": "malinois",
+    "image": "http://placehold.it/32x32",
+    "activity": "Friendly",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "pinscher",
+      "ageMin": 4,
+      "ageMax": 18
+    }
+  },
+  {
+    "dogName": "Hubbard",
+    "email": "hubbard@hubbardmail.com",
+    "password": "05015be8-97eb-4b30-8628-627cb4456965",
+    "age": 18,
+    "phoneNumber": "(890) 574-3903",
+    "breed": "setter",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "samoyed",
+      "ageMin": 12,
+      "ageMax": 3
+    }
+  },
+  {
+    "dogName": "Rasmussen",
+    "email": "rasmussen@rasmussenmail.com",
+    "password": "531b6352-5533-49e7-af29-f6afa4463ce8",
+    "age": 6,
+    "phoneNumber": "(868) 579-3893",
+    "breed": "weimaraner",
+    "image": "http://placehold.it/32x32",
+    "activity": "Shy",
+    "interactions": [],
+    "searchPreferences": {
+      "breed": "dachshund",
+      "ageMin": 15,
+      "ageMax": 13
+    }
+  }
+]
