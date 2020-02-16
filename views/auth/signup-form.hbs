@@ -9,7 +9,14 @@
 
 <form action="/auth/signup" method="post">
 
-  <h1>Sign Up</h1>
+     <h1>Sign Up</h1>
+
+        {{#if errorMessage }}
+        <div style="color: red;" class="error-message">{{ errorMessage }}</div>
+        {{/if}}
+
+        <br>
+        
   
   <fieldset>
     <legend><span class="number">1</span>Your basic info</legend>
@@ -138,6 +145,7 @@
     <input type="image" name="image">
   
   <br>
+  <br>
 
     <legend><span class="number">2</span>Searching preferences</legend>
 
@@ -247,6 +255,8 @@
 
   </fieldset>
   <button type="submit">Sign Up</button>
+
+
 </form>
 
 </body>
