@@ -3,14 +3,31 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 30%;
-  }
+}
+  
 #index-buttons {
     display: flex;
     justify-content: center;
-  }
+}
+
 #login {
     background-color: rgb(125, 0, 129);
     color: black;
-    width: 300px;
+    width: 200px;
     height: 32px;
+}
+
+form {
+    display: block;
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    margin: 10px 0;
+    width: 300px;
+    border: 1px solid purple;
+    border-radius: 3px;
 }
