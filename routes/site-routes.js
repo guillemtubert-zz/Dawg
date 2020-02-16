@@ -20,7 +20,7 @@ siteRouter.get('/profile',  (req, res) => {
   //doc.find by id to 
   Dog.findOne({_id})
   .then( (dogProfile) => {
-    
+
     const {dogName, age, phoneNumber, breed, image, activity} = dogProfile;
     res.render('profile', {dogName, age, phoneNumber, breed, image, activity});
   })
@@ -30,6 +30,10 @@ siteRouter.get('/profile',  (req, res) => {
 });
 siteRouter.get('/swipe',  (req, res) => {
   res.render('swipe')
+});
+
+siteRouter.get('/profile-settings',  (req, res) => {
+  res.render('profile-settings')
 });
 
 module.exports = siteRouter;

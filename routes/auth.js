@@ -23,7 +23,8 @@ console.log("req body",req.body);
 // 4 - Check if `username` or `password` are empty and display error message
 if (password === "" || email === "" || dogName === "" || phoneNumber === "" || age === "") {
     res.render("auth/signup-form", {
-      errorMessage: "Username and Password are required"
+      errorMessage: "Something went wrong, try again."
+      // Failed to sign up
     });
     return;
 }
@@ -48,7 +49,7 @@ Dog.findOne( { email } )
       Dog.create({ email, password: hashedPassword, dogName, age, phoneNumber, breed, image, activity, searchPreferences: searchPreferencesObj })
         .then(createUser => {
         req.session.currentUser= createUser;
-          res.render("index") //Donde queremos que vaya despues del register
+          res.redirect("/profile/swipe") //Donde queremos que vaya despues del register
       })
         .catch(err => {
           res.render("auth/signup-form", {
@@ -100,7 +101,7 @@ console.log("email is:",email);
       if(passwordCorrect) {
         //SAVE THE LOGIN SESSION 
         req.session.currentUser = user;
-        res.redirect("/");
+        res.redirect("/profile/swipe");
       } else {
         res.render("auth/login-form", {
           errorMessage: "Incorrect password..."
