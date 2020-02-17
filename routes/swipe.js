@@ -5,13 +5,33 @@ const Dog = require("../models/Dog");
 
 swipeRouter.get('/',  (req, res) => {
   const {_id} = req.session.currentUser;
-  Dog.find({_id: {$ne: {_id}}})
+  Dog.find()
     .then((dogs) => {
+        let randomNumber =Math.floor((Math.random() * dogs.length) + 1);
+        if (dogs[randomNumber]._id !== {_id}){
         const data = {
-            dogsObj: {...dogs} };
-            res.render("swipe", data);
-        })
+            dogsObj: dogs[randomNumber] };
+            res.render("swipe", data)}
+          else if (dogs[randomNumber]._id === {_id}){
+            randomNumber ++;
+            const data = {
+              dogsObj: dogs[randomNumber] };
+              res.render("swipe", data)}
+          }
+        )
         .catch(err => console.log(err));
-    });
+  });
+
+
+  // swipeRouter.get('/',  (req, res) => {
+  //   const {_id} = req.session.currentUser;
+  //   Dog.findOne({_id: {$ne: {_id}}})
+  //     .then((dogs) => {
+  //         const data = {
+  //             dogsObj: {...dogs} };
+  //             res.render("swipe", data);
+  //         })
+  //         .catch(err => console.log(err));
+  //   });
 
 module.exports = swipeRouter;
