@@ -4,6 +4,7 @@
 
 const mongoose = require("mongoose");
 const Dog = require("../models/Dog");
+require('dotenv').config();
 
 const dbName = "Dog-Network";
 const dogs = [
@@ -1610,7 +1611,7 @@ const dogs = [
   ]
 
   // 1. ESTABLISH CONNECTION TO MONGO
-  mongoose.connect(`mongodb://localhost:27017/${dbName}`, {
+  mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
