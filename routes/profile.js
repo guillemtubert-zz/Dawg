@@ -19,7 +19,7 @@ siteRouter.use((req, res, next) => {
 });
 
 siteRouter.get('/profile',  (req, res) => {
-  const {_id} = req.session.currentUser;
+  const {_id} = req.query;
 
   //doc.find by id to 
   Dog.findOne({_id})
