@@ -29,8 +29,6 @@ siteRouter.get('/profile',  (req, res) => {
     res.render('profile', {dogName, age, phoneNumber, breed, image, activity});
   })
   .catch( (err) => console.log(err));
-
-  // 
 });
 
 
