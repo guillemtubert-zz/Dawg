@@ -11,7 +11,7 @@ const dogSchema = new Schema(
   breed: { type: String},
   image: { type: String, default: "https://i.pinimg.com/originals/fa/6b/7b/fa6b7b4aa80577ecc8cb475922e9227d.jpg" },
   activity: { type: String},
-  interactions: ["matchId"], // TODO update to be ObjectId type
+  interactions: [{type: Schema.Types.ObjectId, ref: "Match"}], // TODO update to be ObjectId type
   searchPreferences :{
     breed: { type: String},
     ageMin : { type: Number, min: 0, max: 19 },

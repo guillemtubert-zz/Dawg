@@ -113,7 +113,7 @@ console.log("email is:",email);
 
 authRouter.get('/logout', (req, res) => {
     req.session.destroy( (err) => {
-      res.redirect('/login')
+      res.redirect('/auth/login')
     })
   })
 

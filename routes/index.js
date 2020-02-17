@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
+
 const authRouter = require("./auth");
-const siteRouter = require ('./site-routes')
+const siteRouter = require ('./profile')
 
 router.use("/auth", authRouter);
 router.use("/profile", siteRouter);
