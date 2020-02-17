@@ -8,12 +8,14 @@ siteRouter.use((req, res, next) => {
     next(); // ==> go to the next route -->
   } 																
   else {                          	
-  	res.redirect("/auth/login");
+  	res.redirect("/index");
   }                     
-});																
+});
+
 siteRouter.get('/match',  (req, res) => {
   res.render('match')
 });
+
 siteRouter.get('/profile',  (req, res) => {
   const {_id} = req.session.currentUser;
 

@@ -75,7 +75,7 @@ authRouter.get("/login", (req, res) => {
     res.render("auth/login-form");
   });
 
-  authRouter.post("/login", (req, res) => {
+authRouter.post("/login", (req, res) => {
     const { email, password } = req.body;
 
     if (password === "" || email === "") {
@@ -101,7 +101,7 @@ console.log("email is:",email);
       if(passwordCorrect) {
         //SAVE THE LOGIN SESSION 
         req.session.currentUser = user;
-        res.redirect();
+        res.redirect("/profile/swipe");
       } else {
         res.render("auth/login-form", {
           errorMessage: "Incorrect password..."
@@ -111,7 +111,7 @@ console.log("email is:",email);
     .catch(err => console.log(err));
   });
 
-  authRouter.get('/logout', (req, res) => {
+authRouter.get('/logout', (req, res) => {
     req.session.destroy( (err) => {
       res.redirect('/login')
     })
