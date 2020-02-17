@@ -9,7 +9,7 @@ const dogSchema = new Schema(
   age: { type: Number, min: 0, max: 20,required: true },
   phoneNumber: { type: String, required: true },
   breed: { type: String},
-  image: { type: String, default: "https://i.pinimg.com/originals/fa/6b/7b/fa6b7b4aa80577ecc8cb475922e9227d.jpg" },
+  image: { type: String, default:"https://images.dog.ceo/breeds/sheepdog-english/n02105641_13779.jpg" },
   activity: { type: String},
   interactions: [{type: Schema.Types.ObjectId, ref: "Match"}], // TODO update to be ObjectId type
   searchPreferences :{
