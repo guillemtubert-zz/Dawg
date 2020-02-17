@@ -8,18 +8,10 @@
 
     <H1>SWIPE BOI</H1>
 
-    <h1>
-    {{dogName}}
+ {{#each dogsObj}}
 
-    <br>
+      {{this.dogName}}
+      {{this.breed}}
+      {{this.age}}
 
-    {{age}}
-<br>
-    {{breed}}
-<br>
-    {{activity}}
-
-<br>
-      {{image}}
-
-</h1>
+ {{/each}}
