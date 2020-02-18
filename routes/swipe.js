@@ -22,16 +22,4 @@ swipeRouter.get('/',  (req, res) => {
         .catch(err => console.log(err));
   });
 
-
-  // swipeRouter.get('/',  (req, res) => {
-  //   const {_id} = req.session.currentUser;
-  //   Dog.findOne({_id: {$ne: {_id}}})
-  //     .then((dogs) => {
-  //         const data = {
-  //             dogsObj: {...dogs} };
-  //             res.render("swipe", data);
-  //         })
-  //         .catch(err => console.log(err));
-  //   });
-
 module.exports = swipeRouter;

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const matchSchema = new Schema({
-    dogOneId: {type: Schema.Types.ObjectId, ref:"Dog"},
+    dogOneId: {type: Schema.Types.ObjectId, ref:"Dog"}, //require true
     dogTwoId: {type: Schema.Types.ObjectId, ref:"Dog"},
     dogOneAnswer: { type: String, enum: ["like","reject","pending"], default: "pending" },
     dogTwoAnswer: { type: String, enum: ["like","reject","pending"], default: "pending" },
