@@ -27,9 +27,9 @@ siteRouter.get('/profile',  (req, res) => {
   .then( (dogProfile) => {
     console.log("dogProfile", dogProfile);
     
-    const {dogName, age, phoneNumber, breed, image, activity, _id} = dogProfile;
-    res.render('profile', {dogName, age, phoneNumber, breed, image, activity, _id});
-    console.log("age", dogName);
+    const {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id} = dogProfile;
+    res.render('profile', {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id});
+   
   })
   .catch( (err) => console.log(err));
 });
@@ -48,9 +48,16 @@ siteRouter.post("/delete/:id", (req, res) => {
 
 siteRouter.post('/edit', (req, res) => {
   const { _id } = req.session.currentUser;
-  const { dogName, age, breed } = req.body;
+  const { dogName, age, breed, activity } = req.body;
+  // const { ageMin, ageMax } = req.body.searchPreferences;
+  const searchPreferences = {
+    breed: req.body.searchPreferencesBreed,
+    ageMin: req.body.searchPreferencesAgeMin,
+    ageMax: req.body.searchPreferencesAgeMax,
+  }
+  
 
-  Dog.updateOne({_id}, { dogName, age, breed } )
+  Dog.updateOne({_id}, { dogName, age, breed, activity, searchPreferences } )
   .then( () => res.redirect("/profile/profile"))
   .catch( (err) => console.log(err));
 });
