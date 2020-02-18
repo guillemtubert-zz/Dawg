@@ -3,7 +3,13 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const session = require('express-session');
+const morgan = require('morgan')
 const MongoStore = require('connect-mongo')(session);
+
+
+// LOAD .env  values
+require('dotenv').config();
+
 
 const router = require('./routes/index');
 // const profileRouter = require ('./routes/site-routes.js')
@@ -14,7 +20,7 @@ const dbName = "Dog-Network";
 
 const app = express();
 
-mongoose.connect(`mongodb://localhost:27017/${dbName}`, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -27,11 +33,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(morgan('tiny')); //tiny or dev. tiny small info dev more
 
 // SESSION MIDDLEWARE
 app.use(
   session({
-    secret: "basic-auth-secret",
+    secret: process.env.SESSION_SECRET,
     // cookie: { maxAge: 3600000 * 1 },	// 1 hour
     resave: true,
     saveUninitialized: false,
