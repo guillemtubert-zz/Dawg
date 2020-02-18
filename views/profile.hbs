@@ -1,15 +1,22 @@
-<nav>
-        <ul class="nav-bar"> <!-- Navigation Bar-->
-              <li><a href="/profile/profile" id="#profile">Profile</a></li>
-              <li><a href="/profile/swipe" id="#swipe">Swipe</a></li>
-              <li><a href="/profile/match" id= "#match">Match</a></li>
-        </ul>
-    </nav>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/profile.css' />
+  </head>
+  <body>
+      <nav>
+            <ul class="nav-bar"> <!-- Navigation Bar-->
+               <li><a href="/profile/profile" id="#profile"><img src="/images/dogy.png" alt="profile logo" class="logo"></a></li>
+              <li><a href="/profile/swipe" id="#swipe"> <img src="/images/bwlogo.png" alt="match logo" class="logo"></a></li>
+              <li><a href="/profile/match" id= "#match" ><img src="/images/bwchat.png" alt="match logo" class="logo"></a></li>
+            </ul>
+       </nav>
 
     <h1>PROFILE</h1>
 
 
-      <img src="{{image}}" alt="">
+    <img src="{{image}}" alt="profile image">
 
     <h1>{{dogName}}, {{age}}</h1>
 <br>
@@ -26,3 +33,5 @@
 
 <a href="/profile/delete/{{dog._id}}">DELETED</a>
 <a href="/profile/delete?dog={{dog._id}}"> DELETED 2</a>
+  </body>
+</html>
