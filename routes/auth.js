@@ -1,6 +1,8 @@
 var express = require("express");
 var authRouter = express.Router();
 const Dog = require("../models/Dog");
+const parser = require('../config/cloudinary');
+
 
 // 1 - Require `bcrypt` for passwords hashing
 // 2 - Create variable for the number of salt rounds
@@ -9,9 +11,13 @@ const zxcvbn = require("zxcvbn");
 const saltRounds = 10;
 
 // POST '/'
-authRouter.post("/signup", (req, res) => {
+authRouter.post("/signup", parser.single('photo') ,(req, res) => {
 // 3 - Deconstruct the `username` and `password` from req.body
-    const { dogName, email, password, age, phoneNumber, breed, image, activity, searchAgeMin, searchAgeMax, searchBreed} = req.body;
+    const image = req.file.secure_url;
+    console.log(req.file);
+
+    
+    const { dogName, email, password, age, phoneNumber, breed, activity, searchAgeMin, searchAgeMax, searchBreed} = req.body;
     
     const searchPreferencesObj = {
       breed: searchBreed,
@@ -65,6 +71,8 @@ Dog.findOne( { email } )
 
   // catch errors from User.findOne
 });
+
+
 
 // GET    /signup
 authRouter.get("/signup", (req, res) => {
