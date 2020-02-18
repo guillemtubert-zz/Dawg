@@ -16,23 +16,22 @@
 
     <H1>SWIPE BOI</H1>
 
- {{#each dogsObj}}
-
-    <img src="{{this.image}}" alt=""> 
-   <h2>{{this.dogName}}</h2>  
-     <h2>{{this.age}}</h2>   
-      <h2>{{this.breed}}</h2>
-     
-
- {{/each}}
-
-<button formaction="/profile/match" type='submit' class= "yesnobutton" style="color: red;">NO</button>
-<button formaction="/profile/match" type='submit' class= "yesnobutton" style="color: green;">YES</button >
- <br>
 
 
-<a href="/profile/swipe"><img src="/images/redmark.png" alt="No logo" class="logo"></a>
-<a href="/profile/swipe"><img src="/images/greenmark.png" alt="GreenLike" class="logo"></a>
+    <img src="{{dogsObj.image}}" alt=""> 
+   <h2>{{dogsObj.dogName}}</h2>  
+     <h2>{{dogsObj.age}}</h2>   
+      <h2>{{dogsObj.breed}}</h2>
+
+<div class="yesnobuttons">
+ <form action="/profile/match/{{dogsObj._id}}" method="POST">
+  <button type="submit" class="rejectbutton" value="reject" name="answer"></button>
+</form>
+
+<form action="/profile/match/{{dogsObj._id}}" method="POST">
+  <button type="submit" class="likebutton" value="like" name="answer"></button>
+</form>
+</div>
 
 
   </body>
