@@ -14,6 +14,7 @@ a {
   text-align:center;
   display: flex;
   justify-content: space-evenly;
+  list-style-type: none;
 }
 
 .nav-bar a{
@@ -23,6 +24,10 @@ a {
 }
 .nav-bar ul{
   color: #00B7FF;
+}
+
+.mobile-view{
+  display: flexbox;
 }
 
 

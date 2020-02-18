@@ -25,11 +25,11 @@ siteRouter.get('/profile',  (req, res) => {
 
   Dog.findOne({_id})
   .then( (dogProfile) => {
-    console.log("dogProfile", dogProfile);
+
     
     const {dogName, age, phoneNumber, breed, image, activity, _id} = dogProfile;
     res.render('profile', {dogName, age, phoneNumber, breed, image, activity, _id});
-    console.log("age", dogName);
+
   })
   .catch( (err) => console.log(err));
 });
@@ -60,7 +60,7 @@ siteRouter.post('/edit', (req, res) => {
 siteRouter.get('/edit',  (req, res) => {
 
   const { _id } = req.session.currentUser;
-  console.log('id', _id);
+
   
 
   Dog.findOne({ _id: _id })
@@ -68,7 +68,6 @@ siteRouter.get('/edit',  (req, res) => {
       const data = {
         dog: oneDog
       };
-      console.log(data);
       
       res.render("profile-settings", data);
     })
