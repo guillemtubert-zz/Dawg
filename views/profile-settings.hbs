@@ -1,1 +1,15 @@
 <h1>Profile settings</h1>
+
+<form action="/profile/edit" method="POST">
+
+  <label for="">Age:</label>
+  <input type="text" name="age" value="{{dog.age}}">
+  <br>
+
+  <label for="">Breed:</label>
+  <input type="text" name="breed" value="{{dog.breed}}">
+  <br>
+
+  <button class="edit-button" type="submit">EDIT</button>
+
+</form>

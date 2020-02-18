@@ -18,7 +18,9 @@
 
     <img src="{{image}}" alt="profile image">
 
-    <h1>{{dogName}}, {{age}}</h1>
+  <h1>{{dogName}} </h1>
+
+    <h1>{{age}}</h1>
 <br>
     <h2>{{breed}}</h2>
 <br>
@@ -26,8 +28,16 @@
 
 <br>
 
-    <button><a href="/profile/profile-settings">SETTINGS</a></button>
+    
     <button type=""><a href="/auth/logout">LOG OUT</a></button>
+
+<form action="/profile/delete/{{_id}}" method="POST">
+  <button type="submit">DELETE USER</button>
+</form>
+
+<form action="/profile/edit" method="GET">
+  <button>EDIT PROFILE</button>
+</form>
 
   </body>
 </html>
