@@ -13,16 +13,12 @@
             </ul>
        </nav>
 
-    <h1>PROFILE</h1>
+    <h1>{{dogName}}</h1>
 
-<form action="/profile/edit" method="GET">
-  <button>EDIT PROFILE</button>
-</form>
-
+  <div class="profile-image">
     <img src="{{image}}" alt="profile image">
-
-  <h1>{{dogName}}</h1>
-
+  </div>
+  
     <h1>{{age}}</h1>
 <br>
     <h2>{{breed}}</h2>
@@ -32,6 +28,10 @@
    <h2>{{searchPreferences}}</h2> 
 
 <br>
+
+<form action="/profile/edit" method="GET">
+  <button>EDIT PROFILE</button>
+</form>
     
 <button type=""><a href="/auth/logout">LOG OUT</a></button>
 
