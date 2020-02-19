@@ -12,6 +12,7 @@ const dogSchema = new Schema(
   image: { type: String, default:"https://images.dog.ceo/breeds/sheepdog-english/n02105641_13779.jpg" },
   activity: { type: String},
   interactions: [{type: Schema.Types.ObjectId, ref: "Match"}], // TODO update to be ObjectId type
+  selected: [{type: Schema.Types.ObjectId, ref: "Dog"}],
   searchPreferences :{
     breed: { type: String},
     ageMin : { type: Number, min: 0, max: 19 },
@@ -25,6 +26,8 @@ const dogSchema = new Schema(
     }
   }
 );
+
+// hiroku try
 
 const Dog = mongoose.model("Dog", dogSchema);
 

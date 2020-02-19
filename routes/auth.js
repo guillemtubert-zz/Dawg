@@ -1,7 +1,7 @@
 var express = require("express");
 var authRouter = express.Router();
-const Dog = require("../models/Dog");
-const parser = require('../config/cloudinary');
+const Dog = require("../models/dog");
+const parser = require('./../config/cloudinary');
 
 
 // 1 - Require `bcrypt` for passwords hashing
@@ -92,7 +92,7 @@ authRouter.post("/login", (req, res) => {
       });
       return;
     }
-console.log("email is:",email);
+
     Dog.findOne({email})
     .then(user => {
       if (!user) {

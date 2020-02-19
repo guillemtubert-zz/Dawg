@@ -1,6 +1,6 @@
 var express = require("express");
 var siteRouter = express.Router();
-const Dog = require("../models/Dog");
+const Dog = require("../models/dog");
 
 const swipeRouter = require ('./swipe')
 const matchRouter = require ('./match')
@@ -27,8 +27,8 @@ siteRouter.get('/profile',  (req, res) => {
   .then( (dogProfile) => {
 
     
-    const {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id} = dogProfile;
-    res.render('profile', {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id});
+    const {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id, interactions} = dogProfile;
+    res.render('profile', {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id, interactions});
    
   })
   .catch( (err) => console.log(err));
