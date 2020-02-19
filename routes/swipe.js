@@ -4,12 +4,11 @@ const Dog = require("../models/dog");
 
 
 swipeRouter.get('/',  (req, res) => {
-  console.log('req.session', req.session);
   
   const { _id } = req.session.currentUser;
+  
   Dog.findOne( {_id})
   .then( (myDog) => {
-    console.log('myDog', myDog);
     
     let excludeDogs;
     if (myDog.selected.length === 0 ) {
