@@ -94,7 +94,7 @@ Match model
 
 [Repository Link](https://github.com/guillemtubert/Doggy)
 
-[Deploy Link](http://heroku.com) TO BE DONE
+[Deploy Link](https://dawg-project.herokuapp.com/)
 
 ### Slides 
 

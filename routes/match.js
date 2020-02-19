@@ -20,7 +20,7 @@ matchRouter.post('/:id', (req, res, next) =>{
         }
       })
     }
-    console.log('alreadyMatched', alreadyMatched);
+    // console.log('alreadyMatched', alreadyMatched);
     
     if(!alreadyMatched) {
         const dogOneId = req.session.currentUser._id;
@@ -37,7 +37,7 @@ matchRouter.post('/:id', (req, res, next) =>{
         .catch((err) => console.log(err));
     } else {
       const dogTwoAnswer = req.body.answer;
-      console.log('data we have:', alreadyMatched, dogTwoAnswer);
+      // console.log('data we have:', alreadyMatched, dogTwoAnswer);
 
       let success;
 
@@ -49,7 +49,7 @@ matchRouter.post('/:id', (req, res, next) =>{
       
       Match.findByIdAndUpdate(alreadyMatched._id, {dogTwoAnswer, success}, {new:true})
       .then((match)=>{
-        console.log("match", match)
+        // console.log("match", match)
         res.redirect("/profile/swipe")
       })    
     }

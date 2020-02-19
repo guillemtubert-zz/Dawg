@@ -27,8 +27,8 @@ siteRouter.get('/profile',  (req, res) => {
   .then( (dogProfile) => {
 
     
-    const {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id} = dogProfile;
-    res.render('profile', {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id});
+    const {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id, interactions} = dogProfile;
+    res.render('profile', {dogName, age, phoneNumber, breed, image, activity, searchPreferences, _id, interactions});
    
   })
   .catch( (err) => console.log(err));
