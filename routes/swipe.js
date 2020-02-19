@@ -11,13 +11,13 @@ swipeRouter.get('/',  (req, res) => {
         if (dogs[randomNumber]._id !== {_id}){
         const data = {
             dogsObj: dogs[randomNumber] };
-            console.log(data);
+            // console.log(data);
             res.render("swipe", data)}
           else if (dogs[randomNumber]._id === {_id}){
             randomNumber ++;
             const data = {
               dogsObj: dogs[randomNumber] };
-              console.log(data);
+              // console.log(data);
               
               res.render("swipe", data)}
           }
