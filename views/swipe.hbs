@@ -7,21 +7,18 @@
   <body>
     
         <nav>
-        <ul class="nav-bar"> <!-- Navigation Bar-->
+        <ul class="nav-bar">
               <li><a href="/profile/profile" id="#profile"><img src="/images/bgdogy.jpg" alt="profile logo" class="logo"></a></li>
               <li><a href="/profile/swipe" id="#swipe"> <img src="/images/FirstLogo.png" alt="match logo" class="logo"></a></li>
               <li><a href="/profile/match" id= "#match" ><img src="/images/bwchat.png" alt="match logo" class="logo"></a></li>
         </ul>
     </nav>
-
-    <H1>SWIPE BOI</H1>
-
-
-
+<div class="swipe-content">
     <img src="{{dogsObj.image}}" alt=""> 
-   <h2>{{dogsObj.dogName}}</h2>  
-     <h2>{{dogsObj.age}}</h2>   
+   <h2>{{dogsObj.dogName}}, {{dogsObj.age}}</h2>   
       <h2>{{dogsObj.breed}}</h2>
+</div>
+
 
 <div class="yesnobuttons">
  <form action="/profile/match/{{dogsObj._id}}" method="POST">
