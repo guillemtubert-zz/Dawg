@@ -92,7 +92,7 @@ authRouter.post("/login", (req, res) => {
       });
       return;
     }
-console.log("email is:",email);
+
     Dog.findOne({email})
     .then(user => {
       if (!user) {
