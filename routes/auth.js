@@ -1,7 +1,7 @@
 var express = require("express");
 var authRouter = express.Router();
-const Dog = require("../models/Dog");
-const parser = require('../config/cloudinary');
+const Dog = require("./../models/Dog");
+const parser = require('./../config/cloudinary');
 
 
 // 1 - Require `bcrypt` for passwords hashing

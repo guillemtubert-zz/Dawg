@@ -1,7 +1,7 @@
 var express = require("express");
 var matchRouter = express.Router();
-const Dog = require("../models/Dog");
-const Match = require("../models/Match");
+const Dog = require("./../models/Dog");
+const Match = require("./../models/Match");
 
 
 

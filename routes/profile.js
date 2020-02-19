@@ -1,6 +1,6 @@
 var express = require("express");
 var siteRouter = express.Router();
-const Dog = require("../models/Dog");
+const Dog = require("./../models/Dog");
 
 const swipeRouter = require ('./swipe')
 const matchRouter = require ('./match')
