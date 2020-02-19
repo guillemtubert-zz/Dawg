@@ -1,6 +1,6 @@
 var express = require("express");
 var authRouter = express.Router();
-const Dog = require("./../models/Dog");
+const Dog = require("../models/dog");
 const parser = require('./../config/cloudinary');
 
 

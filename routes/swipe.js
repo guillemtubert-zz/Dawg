@@ -1,6 +1,6 @@
 var express = require("express");
 var swipeRouter = express.Router();
-const Dog = require("./../models/Dog");
+const Dog = require("../models/dog");
 
 
 swipeRouter.get('/',  (req, res) => {
