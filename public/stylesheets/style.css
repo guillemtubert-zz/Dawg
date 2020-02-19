@@ -1,20 +1,38 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-@media screen and (min-width: 480px) {
-
-  * {
-    
-    max-width: 480px;
+/* General features */
+  .fa {
+    font-size: 50px;
+    color: rgb(255, 173, 173);
+  }
+  
+  .fa:hover {
+    font-size: 60px;
+    color: rgb(255, 148, 9);
   }
 
+.full-screen {
+  height: 100vh;
+  /* background-color: red; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
 }
 
 a {
   color: #00B7FF;
 }
+
+
+#menu {
+  background-color: #e92b4a;
+  height: 70px;
+  width: 100vw;
+}
+
+/* Nav bar 
 
 .nav-bar{
   padding: 0px 0px 0px 0px;
@@ -35,9 +53,102 @@ a {
   color: #00B7FF;
 }
 
-.mobile-view{
-  display: flexbox;
+.navbar-logo{
+  width: 90px;
+  height: 90px;
 }
 
 
+/* Index & log-in page 
 
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.dawg {
+  width: 270px;
+  height: 70px;
+}
+*/
+
+#login-button {
+  background-color: rgb(125, 0, 129);
+  color:white;
+  border-radius: 5px;
+  margin: 30px;
+  width: 200px;
+  height: 40px;
+  align-items: center;
+  font-size: 20px;
+}
+
+/*
+#login-form {
+  display: block;
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+*/
+#login-input{
+  margin: 10px 0;
+  width: 300px;
+  border: 1px solid purple;
+  border-radius: 3px;
+}
+
+/* Profile */
+
+#profile-info {
+  margin: 20px;
+}
+
+.row button {
+  background-color: palevioletred;
+  padding: 15px 15px;
+}
+
+.img-fluid {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dogName {
+  color: palevioletred;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Swipe */
+
+.rejectbutton{
+  width: 150px;
+  height: 150px;
+  background-size: 100%;
+  background-image: url(/images/redmark.png);
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 100%;
+}
+
+.likebutton{
+  width: 150px;
+  height: 150px;
+  background-size: 100%;
+  background-image: url(/images/greenmark.png);
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 100%;
+}
+
+.yesnobuttons {
+  margin: 0 auto;
+  text-align:center;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}

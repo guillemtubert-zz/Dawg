@@ -1,46 +1,51 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/profile.css' />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  </head>
-  <body>
-      <nav>
-            <ul class="nav-bar"> <!-- Navigation Bar-->
-               <li><a href="/profile/profile" id="#profile"><img src="/images/dogy.png" alt="profile logo" class="logo"></a></li>
-              <li><a href="/profile/swipe" id="#swipe"> <img src="/images/bwlogo.png" alt="match logo" class="logo"></a></li>
-              <li><a href="/profile/match" id= "#match" ><img src="/images/bwchat.png" alt="match logo" class="logo"></a></li>
-            </ul>
-       </nav>
+<div class="container">
 
-    <h1>{{dogName}}</h1>
-
-  <div class="profile-image">
-    <img src="{{image}}" alt="profile image">
+  <div class="row" id="menu">
+    <div class="col col-xs-4">
+      <a class="nav-link" href="/profile/profile"><i class="fa fa-paw"></i></a>
+    </div>
+    <div class="col col-xs-4">
+      <a class="nav-link" href="/profile/swipe"><i class="fa fa-heart"></i></a>
+    </div>
+    <div class="col col-xs-4">
+      <a class="nav-link" href="/profile/match"><i class="fa fa-comments"></i></a>
+    </div>
   </div>
 
-    <h1>{{age}}</h1>
-<br>
-    <h2>{{breed}}</h2>
-<br>
-   <h2>{{activity}}</h2> 
 
-{{!-- esto deberia estar fuera? --}}
 
-   <h2>{{searchPreferences}}</h2>   
+  <div class="row">
+    <div class="col col-xs-3">
+      <h1 class="dogName">{{dogName}}</h1>
 
-<br>
+      <img src="{{image}}" alt="profile image" class="img-fluid">
 
-<form action="/profile/edit" method="GET">
-  <button>EDIT PROFILE</button>
-</form>
-    
-<button type=""><a href="/auth/logout">LOG OUT</a></button>
+    <div id="profile-info">
+      <h5>Age: {{age}} years old</h5>
+      <h5>Breed: {{breed}}</h5>
+      <h5>Sociability: {{activity}}</h5>
+    </div>
+      <br>
+    </div>
+  </div>
 
-<form action="/profile/delete/{{_id}}" method="POST">
-  <button type="submit">DELETE USER</button>
-</form>
+  <div class="row">
+    <div class="col col-sm-4">
+      <form action="/profile/edit" method="GET">
+        <button>EDIT PROFILE</button>
+      </form>
+    </div>
+    <div class="col col-sm-4"></div>
+      <a href="/auth/logout"><button type="">LOG OUT</button></a>
+    </div>
+  </div>
 
-  </body>
-</html>
+  <div class="row">
+    <div class="col col-sm-12">
+      <form action="/profile/delete/{{_id}}" method="POST">
+        <button type="submit">DELETE USER</button>
+      </form>
+   </div>
+  </div>
+
+</div>

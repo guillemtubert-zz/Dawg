@@ -1,11 +1,9 @@
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up Form</title>
   <link rel="stylesheet" href="/stylesheets/signupform.css">
-  {{!-- <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'> --}}
+  <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
 
 <form action="/auth/signup" method="post" enctype="multipart/form-data">
 
@@ -16,12 +14,10 @@
         {{/if}}
 
         <br>
-
-  
   
   <fieldset>
     <legend><span class="number">1</span>Your basic info</legend>
-    <input type="file" name="photo" />
+    <input type="file" name="photo">
   
     <label for="">Dog name</label>
     <input type="text" name="dogName">
@@ -31,7 +27,6 @@
   
     <label for="">Password</label>
     <input type="password" name="password">
-  
   
     <label for="">Age</label>
     <input type="number" name="age">
