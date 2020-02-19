@@ -17,9 +17,11 @@
     <h1>MATCHES</h1>
 
 {{#each matches}}
-  
-  {{this}}
-  
+  <div>
+    <img src="{{this.image}}" alt="match image">
+    <p>{{this.dogName}} </p>
+    <p>{{this.phoneNumber}}</p>
+  </div>
 {{/each}}
 
 
