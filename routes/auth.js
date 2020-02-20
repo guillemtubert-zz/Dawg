@@ -64,12 +64,6 @@ Dog.findOne( { email } )
         });
     })
     .catch(err => console.log(err));
-
-// > After hashing the password, create new user in DB
-
-  // >  When the new user is created, redirect to '/home' page
-
-  // catch errors from User.findOne
 });
 
 
