@@ -114,8 +114,17 @@ matchRouter.post('/:id', (req, res, next) =>{
 matchRouter.get('/',  (req, res) => {
   const {_id} = req.session.currentUser;
   Match.find({success:"success", $or:[ {dogOneId: _id}, {dogTwoId: _id}]})
+    .populate("dogOneId dogTwoId") 
     .then( (matches) => {
-      res.render('match', {matches})
+      const filteredMatches = matches.map(matchObj => {
+        if (String(matchObj.dogOneId._id) == String(_id)) {
+          return matchObj.dogTwoId
+        }
+        else{
+          return matchObj.dogOneId
+        }
+      })
+      res.render('match', {matches: filteredMatches})
     })
     .catch(err => console.log(err)
     )
