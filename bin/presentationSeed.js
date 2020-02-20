@@ -351,6 +351,40 @@ const dogs = [
         "ageMax": 17
       }
     },
+    {
+      "dogName": "Greta",
+      "email": "greta@gretamail.com",
+      "password": "aaa",
+      "age": 2,
+      "phoneNumber": "609 827 923",
+      "breed": "potato",
+      "image": "https://img.imgur.com/4zK4EpS.jpg",
+      "activity": "Very Sociable",
+      "interactions": [],
+      "selected": [],
+      "searchPreferences": {
+        "breed": "otterhound",
+        "ageMin": 6,
+        "ageMax": 12
+      }
+    },
+    {
+      "dogName": "Loki",
+      "email": "loki@lokimail.com",
+      "password": "aaa",
+      "age": 5,
+      "phoneNumber": "604 293 011",
+      "breed": "labrador",
+      "image": "https://img.imgur.com/tx9L4lg.jpg",
+      "activity": "Very Sociable",
+      "interactions": [],
+      "selected": [],
+      "searchPreferences": {
+        "breed": "otterhound",
+        "ageMin": 6,
+        "ageMax": 12
+      }
+    }
       ]
 
 const updatedDogs = dogs.map((dog) => {
