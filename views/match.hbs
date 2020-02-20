@@ -12,17 +12,19 @@
     </div>
   </div>
 
-    <h1>MATCHES</h1>
+    <h2 class="match">MATCHES</h2>
 
 {{#each matches}}
   <div>
-    <img src="{{this.image}}" alt="match image">
-    <p>{{this.dogName}} </p>
-    <p>{{this.phoneNumber}}</p>
+    <img src="{{this.image}}" alt="match image" class="img-fluid">
+    <p class="match-name">{{this.dogName}} </p>
+    <p>Contact number: {{this.phoneNumber}}</p>
   </div>
 {{else}}
-<img src="/images/notfound.png" alt="">
-<h1>Not matches found yet</h1>
+<img src="/images/notfound.png" alt="" class="img-fluid">
+<br>
+<br>
+<h2>Not matches found yet!</h2>
 {{/each}}
 
 

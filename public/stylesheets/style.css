@@ -91,8 +91,12 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-
 */
+
+option {
+  border: 1px solid;
+}
+
 #login-input{
   margin: 10px 0;
   width: 300px;
@@ -127,11 +131,29 @@ a {
   justify-content: center;
 }
 
+.match {
+  color: palevioletred;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.match-name {
+  margin-top: 10px;
+  color: palevioletred;
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
 /* Swipe */
 
+#swipe-image {
+  max-height: 50%;
+}
+
 .rejectbutton{
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-size: 100%;
   background-image: url(/images/redmark.png);
   background-repeat: no-repeat;
@@ -140,8 +162,8 @@ a {
 }
 
 .likebutton{
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-size: 100%;
   background-image: url(/images/greenmark.png);
   background-repeat: no-repeat;
@@ -159,7 +181,7 @@ a {
 
 #profile-buttons {
   background-color: #e92b4a;
-  color:rgb(255, 173, 173);
+  color:rgb(255, 255, 255);
   border-radius: 5px;
   margin: 30px;
   width: 150px;
@@ -199,4 +221,9 @@ a {
   height: 40px;
   align-items: center;
   font-size: 16px;
+}
+
+input, select {
+  border: 1px solid rgb(65, 60, 60);
+  border-radius: 3px;
 }

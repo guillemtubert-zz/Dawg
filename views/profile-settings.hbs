@@ -14,7 +14,7 @@
 
 
 
-<h1>Profile settings</h1>
+<h2 class="match">Profile settings</h2>
 
 <form action="/profile/edit" method="POST">
 
@@ -124,7 +124,6 @@
     </label>
   <br>
 
-
   <label for="">Activity:</label>
     <select id="activity" name="activity">
       <option value="shy">Shy</option>
@@ -136,7 +135,7 @@
 
   <br>
 
-<h3>SEARCH PREFERENCES</h3>
+<h4 class="match">Search preferences:</h4>
 
   <label for="">Breed:</label>
       <select id="searchPreferencesBreed" name="searchPreferencesBreed">
@@ -243,7 +242,7 @@
   <input type="text" name="searchPreferencesAgeMax" value="{{dog.searchPreferences.ageMax}}">
   <br>
 
-  <button class="edit-button" type="submit">EDIT</button>
+  <button id="profile-buttons" type="submit">EDIT</button>
 
 </form>
 
