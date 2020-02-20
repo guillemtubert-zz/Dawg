@@ -3,10 +3,9 @@
 // do mongoose connect -> once then inside mongoose connect -> Dog.create(arrayOfDogs)
 
 const mongoose = require("mongoose");
-const Dog = require("../models/Dog");
+const Dog = require("../models/dog");
 require('dotenv').config();
 
-const dbName = "Dog-Network";
 const dogs = [
         {
       "dogName": "Christie",
@@ -120,7 +119,7 @@ const dogs = [
         "ageMax": 13
       }
     }
-  ]
+]
 
   // 1. ESTABLISH CONNECTION TO MONGO
   mongoose.connect(process.env.MONGODB_URI, {

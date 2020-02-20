@@ -3,7 +3,7 @@
 // do mongoose connect -> once then inside mongoose connect -> Dog.create(arrayOfDogs)
 
 const mongoose = require("mongoose");
-const Dog = require("../models/Dog");
+const Dog = require("../models/dog");
 const bcrypt = require("bcrypt");
 require('dotenv').config();
 
