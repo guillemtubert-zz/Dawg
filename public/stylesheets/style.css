@@ -6,7 +6,7 @@
   
   .fa:hover {
     font-size: 60px;
-    color: rgb(255, 148, 9);
+    color: rgb(255, 163, 58);
   }
 
 .full-screen {
@@ -106,8 +106,8 @@ a {
   margin: 20px;
 }
 
-#oye {
-  
+#display-wrapper {
+  height: 60vh;
 }
 
 .row button {
@@ -149,10 +149,54 @@ a {
   border-radius: 100%;
 }
 
-.yesnobuttons {
+.twobuttons {
   margin: 0 auto;
   text-align:center;
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
+}
+
+#profile-buttons {
+  background-color: #e92b4a;
+  color:rgb(255, 173, 173);
+  border-radius: 5px;
+  margin: 30px;
+  width: 150px;
+  height: 40px;
+  align-items: center;
+  font-size: 16px;
+}
+
+#profile-buttons:hover {
+  color: #e92b4a;
+  background-color:rgb(255, 173, 173);
+  border-radius: 5px;
+  margin: 30px;
+  width: 150px;
+  height: 40px;
+  align-items: center;
+  font-size: 16px;
+}
+
+#delete-button {
+  background-color: #9c9c9c;
+  color:rgb(92, 86, 86);
+  border-radius: 5px;
+  margin: 30px;
+  width: 150px;
+  height: 40px;
+  align-items: center;
+  font-size: 16px;
+}
+
+#delete-button:hover {
+  color: #9c9c9c;
+  background-color:rgb(92, 86, 86);
+  border-radius: 5px;
+  margin: 30px;
+  width: 150px;
+  height: 40px;
+  align-items: center;
+  font-size: 16px;
 }
