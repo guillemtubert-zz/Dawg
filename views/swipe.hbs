@@ -11,12 +11,33 @@
       <a class="nav-link" href="/profile/match"><i class="fa fa-heart"></i></a>
     </div>
   </div>
+<br>
 
-<div class="swipe-content">
-    <img src="{{dogsObj.image}}" alt=""> 
-   <h2>{{dogsObj.dogName}}, {{dogsObj.age}}</h2>   
+{{!-- <div class="row">
+    <div class="col col-xs-3 swipe-">
+
+      <img src="{{dogsObj.image}}" class="img-fluid">
+      <div>
+      <h2>{{dogsObj.dogName}}, {{dogsObj.age}}</h2>   
       <h2>{{dogsObj.breed}}</h2>
-</div>
+      </div>
+</div> --}}
+
+
+  <div class="row">
+    <div class="col col-xs-3" id="display-wrapper">
+      <h1 class="dogName">{{dogName}}</h1>
+
+      <img src="{{dogsObj.image}}" alt="profile image" class="img-fluid">
+
+    <div id="profile-info">
+      <h2>{{dogsObj.dogName}}, {{dogsObj.age}}</h2>   
+      <h2>{{dogsObj.breed}}</h2>
+    </div>
+      <br>
+      
+    </div>
+  </div>
 
 
 <div class="twobuttons">

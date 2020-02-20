@@ -106,8 +106,8 @@ a {
   margin: 20px;
 }
 
-#oye {
-
+#display-wrapper {
+  height: 60vh;
 }
 
 .row button {
