@@ -30,18 +30,16 @@
 
     <div class="twobuttons">
       <form action="/profile/edit" method="GET">
-        <button id="login-button">EDIT PROFILE</button>
+        <button id="profile-buttons">EDIT PROFILE</button>
       </form>
-      <a href="/auth/logout"><button id="login-button">LOG OUT</button></a>
+      <a href="/auth/logout"><button id="profile-buttons">LOG OUT</button></a>
     </div>
 
 
-  <div class="row">
-    <div class="col col-sm-12">
+  <div>
       <form action="/profile/delete/{{_id}}" method="POST">
-        <button type="submit">DELETE USER</button>
+        <button type="submit" id="delete-button">DELETE USER</button>
       </form>
-   </div>
   </div>
 
 
