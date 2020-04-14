@@ -10,7 +10,6 @@ const MongoStore = require('connect-mongo')(session);
 // LOAD .env  values
 require('dotenv').config();
 
-
 const router = require('./routes/index');
 // const profileRouter = require ('./routes/site-routes.js')
 // commented bc we aren't sure to add it here
